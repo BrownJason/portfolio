@@ -5,11 +5,11 @@ class InterestComponent extends Component {
   render () {
     return (
       <div className={classes.Outer}>
-      <a href='https://poeplanner.com' >
-        <div className={classes.slide}>
-          <img src={require('../../images/pathOfExile.jpg')} alt='' />
-          
-        </div>
+        <a href='http://www.pathofexile.com/account/view-profile/Zijesinop'>
+          <div className={classes.slide}>
+            <img src={require('../../images/pathOfExile.jpg')} alt='' />
+
+          </div>
         </a>
       </div>
     )

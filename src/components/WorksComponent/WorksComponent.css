@@ -52,7 +52,12 @@
 
 .ReactModule {
     width: 500px;
-    margin: 15px 0  15px 0;
+    margin: 15px 0  75px 0;
+    color: black;
+}
+
+.ReactModule a {
+    text-decoration: none;
     color: black;
 }
 

@@ -17,40 +17,27 @@ import questions7 from './StoryQuestions/questions7.json'
 
 class App extends Component {
   state = {
-      questions: [
-        {
-          ...questions1
-        },
-        {
-          ...questions2
-        },
-        {
-          ...questions3
-        },
-        {
-          ...questions4
-        },
-        {
-          ...questions5
-        },
-        {
-          ...questions6
-        },
-        {
-          ...questions7
-        }
-      ]
-    }
-  
-    
+    questions: [
+      questions1,
+      questions2,
+      questions3,
+      questions4,
+      questions5,
+      questions6,
+      questions7
+    ]
+  }
+
   render () {
-    const question = {...this.state.questions.map(question => (question))}
-    console.log(question)
     return (
       <div className='App' id='home'>
         <NavComponent />
         <Route exact path='/' component={HomeComponent} />
-        <Route exact path='/Story' render={() => <StoryComponent questions={question} />} />
+        <Route
+          exact
+          path='/Story'
+          render={() => <StoryComponent questions={this.state.questions} />}
+        />
         <Route exact path='/Works' component={WorksComponent} />
         <Route exact path='/Interests' component={InterestComponent} />
         <FooterComponent />

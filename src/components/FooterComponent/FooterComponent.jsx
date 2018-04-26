@@ -1,9 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import HomeComponent from '../HomeComponent/HomeComponent'
-import WorksComponent from '../WorksComponent/WorksComponent'
-import InterestComponent from '../InterestComponent/InterestComponent'
-import StoryComponent from '../StoryComponent/StoryComponent'
 
 import { LinkStyles, Footer } from './FooterComponent.css'
 
@@ -13,18 +9,30 @@ const FooterComponent = () => (
       <li>
         © 2018 Copyright Jason Brown
       </li>
-      <NavLink exact to='/' component={HomeComponent} className={LinkStyles} activeStyle={{ color: 'blue' }}>
+      <NavLink
+        exact
+        to='/'
+        className={LinkStyles}
+        activeStyle={{ color: 'blue' }}
+      >
         Home
       </NavLink>
-      <NavLink to='/Story' component={StoryComponent} className={LinkStyles} activeStyle={{ color: 'blue' }}>
+      <NavLink
+        to='/Story'
+        className={LinkStyles}
+        activeStyle={{ color: 'blue' }}
+      >
         Story
       </NavLink>
-      <NavLink to='/Works' component={WorksComponent} className={LinkStyles} activeStyle={{ color: 'blue' }}>
+      <NavLink
+        to='/Works'
+        className={LinkStyles}
+        activeStyle={{ color: 'blue' }}
+      >
         Works
       </NavLink>
       <NavLink
         to='/Interests'
-        component={InterestComponent}
         className={LinkStyles}
         activeStyle={{ color: 'blue' }}
       >
