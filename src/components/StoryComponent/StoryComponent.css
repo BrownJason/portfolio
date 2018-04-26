@@ -1,0 +1,48 @@
+.Outer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: url(../../images/detroit.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    padding: 50px 0 0;
+}
+
+.OuterContent {
+    width: 100%;
+    /* background: rgba(0,0,0,0.6); */
+    z-index: 100;
+}
+
+.StoryQuestions {
+    width: 1400px;
+    margin-left: 50px;
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    z-index: 101;
+
+}
+
+.StoryQuestions ul {
+    padding: 5px;
+}
+
+.Questions h3, .QuestionsStart h3, .QuestionsEnd  h3{
+    color: black;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.Questions, .QuestionsStart, .QuestionsEnd {
+    margin-left: 50px;
+}
+
+.Questions p, .QuestionsStart p, .QuestionsEnd p {
+    color: black;
+}
+
+.Questions a, .QuestionsStart a, .QuestionsEnd a {
+    text-decoration: none;
+    color: #FF2A7F;
+}

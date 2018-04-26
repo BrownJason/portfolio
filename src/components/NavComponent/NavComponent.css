@@ -1,0 +1,37 @@
+.NavBar {
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    border-bottom: 3px solid black;
+}
+
+.TopNav {
+    backface-visibility: hidden;
+    background: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.NavBar ul {
+    display: inline-flex;
+    margin-top: 10px;
+}
+
+.NavBar a {
+    font-size: 14pt;
+    padding-left: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
+a.LinkStyles:hover {
+    color: green;
+}
+
+a.LinkStyles {
+    color: black;
+}
