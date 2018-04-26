@@ -1,0 +1,18 @@
+.Questions h3 {
+    color: black;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.Questions{
+    margin-left: 50px;
+}
+
+.Questions p{
+    color: black;
+}
+
+.Questions a{
+    text-decoration: none;
+    color: #FF2A7F;
+}

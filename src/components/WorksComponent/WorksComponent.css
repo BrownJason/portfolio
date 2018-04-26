@@ -22,6 +22,11 @@
     margin: 15px 0 0 15px;
 }
 
+.JsModule a {
+    text-decoration: none;
+    color: black;
+}
+
 .JsContent {
     width: 475px;
     display: flex;
@@ -73,6 +78,11 @@
 
 .ReactContent img{
     padding: 5px;
+}
+
+.SpringModule a {
+    text-decoration: none;
+    color: black;
 }
 
 .SpringModule {

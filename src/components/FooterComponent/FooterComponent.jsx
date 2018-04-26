@@ -13,19 +13,20 @@ const FooterComponent = () => (
       <li>
         © 2018 Copyright Jason Brown
       </li>
-      <NavLink exact to='/' component={HomeComponent} className={LinkStyles}>
+      <NavLink exact to='/' component={HomeComponent} className={LinkStyles} activeStyle={{ color: 'blue' }}>
         Home
       </NavLink>
-      <NavLink to='/Story' component={StoryComponent} className={LinkStyles}>
+      <NavLink to='/Story' component={StoryComponent} className={LinkStyles} activeStyle={{ color: 'blue' }}>
         Story
       </NavLink>
-      <NavLink to='/Works' component={WorksComponent} className={LinkStyles}>
+      <NavLink to='/Works' component={WorksComponent} className={LinkStyles} activeStyle={{ color: 'blue' }}>
         Works
       </NavLink>
       <NavLink
         to='/Interests'
         component={InterestComponent}
         className={LinkStyles}
+        activeStyle={{ color: 'blue' }}
       >
         Interests
       </NavLink>

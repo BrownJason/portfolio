@@ -19,7 +19,7 @@ class NavComponent extends Component {
               activeStyle={{ color: 'blue' }}
               className={LinkStyles}
             >
-              <i className='fa fa-home'>Home</i>
+              <i className='fa fa-home'>&nbsp;&nbsp;Home</i>
             </NavLink>
             <NavLink
               exact
@@ -28,7 +28,7 @@ class NavComponent extends Component {
               className={LinkStyles}
               component={StoryComponent}
             >
-              <i className='fa fa-book'>Story</i>
+              <i className='fa fa-book'>&nbsp;&nbsp;Story</i>
             </NavLink>
             <NavLink
               exact
@@ -37,7 +37,7 @@ class NavComponent extends Component {
               className={LinkStyles}
               component={WorksComponent}
             >
-              <i className='fa fa-archive'>Works</i>
+              <i className='fa fa-archive'>&nbsp;&nbsp;Works</i>
             </NavLink>
             <NavLink
               exact
@@ -46,7 +46,7 @@ class NavComponent extends Component {
               className={LinkStyles}
               component={InterestComponent}
             >
-              <i className='fa fa-gamepad'>Interests</i>
+              <i className='fa fa-gamepad'>&nbsp;&nbsp;Interests</i>
             </NavLink>
           </ul>
         </nav>

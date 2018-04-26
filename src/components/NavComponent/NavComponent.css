@@ -35,3 +35,7 @@ a.LinkStyles:hover {
 a.LinkStyles {
     color: black;
 }
+
+.NavBar i {
+    margin-right: 10px;
+}

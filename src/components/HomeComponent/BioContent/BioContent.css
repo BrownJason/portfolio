@@ -1,0 +1,8 @@
+.BioContent {
+    height: 80vh;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-between;
+}

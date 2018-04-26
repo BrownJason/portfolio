@@ -1,0 +1,28 @@
+.LinkedLikes {
+    float: left;
+    margin-top: 50px;
+    width: 500px;
+}
+
+.LinkedLikes ul {
+    list-style: none;
+}
+
+.LinkedLikes li {
+    font-size: 28pt;
+    padding: 5px;
+    color: black;
+}
+
+.LinkedLikes a {
+    color: black;
+    text-decoration: none;
+}
+
+.LinkedLikes a:hover {
+    color: blue;
+}
+
+.right {
+    float: right;
+}

@@ -28,21 +28,3 @@
     padding: 5px;
 }
 
-.Questions h3, .QuestionsStart h3, .QuestionsEnd  h3{
-    color: black;
-    font-weight: bold;
-    font-size: 16pt;
-}
-
-.Questions, .QuestionsStart, .QuestionsEnd {
-    margin-left: 50px;
-}
-
-.Questions p, .QuestionsStart p, .QuestionsEnd p {
-    color: black;
-}
-
-.Questions a, .QuestionsStart a, .QuestionsEnd a {
-    text-decoration: none;
-    color: #FF2A7F;
-}

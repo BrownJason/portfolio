@@ -7,6 +7,7 @@ class WorksComponent extends Component {
       <div className={classes.Outer}>
         <div className={classes.OuterContent}>
           <div className={classes.JsModule}>
+          <a href='https://github.com/BrownJason/quizler'>
             <div className={classes.JsContent}>
               <span>JavaScrip Quizler Choose Random</span>
               <img src={require('../../images/javaScriptSnip.PNG')} alt='' />
@@ -17,8 +18,8 @@ class WorksComponent extends Component {
                 {' '}
                 empty, just return that empty array.{' '}
               </p>
-
             </div>
+            </a>
           </div>
           <div className={classes.ReactModule}>
             <div className={classes.ReactContent}>
@@ -35,6 +36,7 @@ class WorksComponent extends Component {
             </div>
           </div>
           <div className={classes.SpringModule}>
+          <a href='https://github.com/BrownJason/spring_assessment'>
             <div className={classes.SpringContent}>
               <span>Spring Assessment Add Relations/Address</span>
               <img src={require('../../images/springSnip.PNG')} alt='' />
@@ -45,6 +47,7 @@ class WorksComponent extends Component {
                 Create relations between users if they want to be related
               </p>
             </div>
+            </a>
           </div>
         </div>
       </div>
