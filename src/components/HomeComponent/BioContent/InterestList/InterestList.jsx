@@ -10,7 +10,7 @@ const InterestList = () => (
         </a>
       </li>
       <li className={classes.right}>
-        <a href='http://www.michigangolf.com/courses/ypsilanti/green-oaks-gc/'>
+        <a href='https://www.facebook.com/groups/311739072291023/'>
           Golf <i className={`fas fa-golf-ball ${classes.fontAwesome}`} />
         </a>
       </li>
@@ -22,7 +22,9 @@ const InterestList = () => (
       <li />
       <li className={classes.right}>
         <a href='https://github.com/BrownJason'>
-          Aspiring Developer <i className={`fas fa-server ${classes.fontAwesome}`} />
+          Aspiring Developer
+          {' '}
+          <i className={`fas fa-server ${classes.fontAwesome}`} />
         </a>
       </li>
     </ul>
