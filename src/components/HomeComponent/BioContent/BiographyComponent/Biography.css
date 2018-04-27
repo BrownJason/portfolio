@@ -33,3 +33,7 @@
 .Bio:hover .Download {
     visibility: visible;
 }
+
+.fontAwesome {
+    color: blue;
+}

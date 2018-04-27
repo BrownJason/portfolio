@@ -1,4 +1,6 @@
 {
     "h3": "Do you volunteer?",
-    "p": "Not really, but I do donate blood every now and then and also grow my hair out to donate it to an organization called Children with Hair Loss - provides free wigs to children by volunteer’s help."
+    "beforeLink": "Not really, but I do donate blood every now and then and also grow my hair out to donate it to an organization called",
+    "links": "http://www.childrenwithhairloss.us/index.php/",
+    "afterLink": "Children with Hair Loss - provides free wigs to children by volunteer’s help."
 }

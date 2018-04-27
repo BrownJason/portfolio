@@ -9,7 +9,7 @@ class WorksComponent extends Component {
           <div className={classes.JsModule}>
             <a href='https://github.com/BrownJason/quizler'>
               <div className={classes.JsContent}>
-                <span>JavaScrip Quizler Choose Random</span>
+                <span><i className='fab fa-node-js' />&nbsp;&nbsp;JavaScrip Quizler Choose Random</span>
                 <img src={require('../../images/javaScriptSnip.PNG')} alt='' />
                 <p>
                   Implement Choose Random function that would pick any given item / items
@@ -24,7 +24,7 @@ class WorksComponent extends Component {
           <div className={classes.ReactModule}>
             <a href='https://github.com/BrownJason/networking'>
               <div className={classes.ReactContent}>
-                <span>React Networking Handle Tweet Submition</span>
+                <span><i className='fab fa-react'/>&nbsp;&nbsp;React Networking Tweet Handleer</span>
                 <img src={require('../../images/networkingSnip.PNG')} alt='' />
                 <p>
                   User is given a input form (text field) to write out a message
@@ -40,7 +40,7 @@ class WorksComponent extends Component {
           <div className={classes.SpringModule}>
             <a href='https://github.com/BrownJason/spring_assessment'>
               <div className={classes.SpringContent}>
-                <span>Spring Assessment Add Relations/Address</span>
+                <span><i class='fab fa-java' />&nbsp;&nbsp;Spring Assessment Add Relations/Address</span>
                 <img src={require('../../images/springSnip.PNG')} alt='' />
                 <p>
                   Adds a user to a specified address only if that current user doesn't have

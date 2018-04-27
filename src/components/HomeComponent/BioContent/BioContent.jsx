@@ -5,11 +5,11 @@ import HeadShot from './HeadShot/HeadShot'
 import Biography from './BiographyComponent/Biography'
 
 const BioContent = () => (
-    <div className={classes.BioContent}>
-        <InterestList />
-        <HeadShot />
-        <Biography />
-    </div>
+  <div className={classes.BioContent}>
+    <InterestList />
+    <HeadShot />
+    <Biography />
+  </div>
 )
 
 export default BioContent

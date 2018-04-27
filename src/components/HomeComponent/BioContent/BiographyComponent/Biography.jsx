@@ -9,9 +9,9 @@ const Biography = () => (
         <a href={pdf} target='_blank'>
             <div className={classes.Bio}>
             <h2>
-                <i className='fa fa-file'>
+                <i className={`fa fa-file ${classes.fontAwesome}`} />
                 <span> Biography</span>
-                </i>
+                
                 <span class={classes.Download}>Download</span>
             </h2>
             </div>
