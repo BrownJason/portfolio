@@ -2,5 +2,6 @@
     "h3": "What are your hobbies or free-time activities?",
     "beforeLink": "Some hobbies would include bowling with family and friends; family has our own league every other saturday night in Michigan called",
     "links": "https://www.facebook.com/groups/BrownFamilyLeague/",
-    "afterLink": "Brown Family League that started with my Grandma and Grandpa Brown and has been continuing for over 40 years now."
+    "linkText": "Brown Family League",
+    "afterLink": " that started with my Grandma and Grandpa Brown and has been continuing for over 40 years now."
 }

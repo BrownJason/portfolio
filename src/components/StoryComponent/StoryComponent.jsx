@@ -32,6 +32,7 @@ class StoryComponent extends Component {
                 pText={question.p}
                 beforeLink={question.beforeLink}
                 link={question.links}
+                linkText={question.linkText}
                 afterLink={question.afterLink}
               />
             ))}

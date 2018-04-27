@@ -51,6 +51,17 @@ class WorksComponent extends Component {
               </div>
             </a>
           </div>
+          <div className={classes.JavaModule}>
+            <a href='https://github.com/cooksystemsinc/java-xml-file-transfer-assessment-BrownJason'>
+              <div className={classes.JavaContent}>
+              <span>Java Assessment XML Fil Transfer</span>
+              <img src={require('../../images/javaSnip.PNG')} alt=''/>
+              <p>
+                Purpose of
+              </p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     )
