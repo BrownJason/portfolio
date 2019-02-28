@@ -9,7 +9,7 @@ const FooterComponent = () => (
       <li>
         © 2018 Copyright Jason Brown
       </li>
-      <NavLink
+      {/* <NavLink
         exact
         to='/'
         className={LinkStyles}
@@ -37,7 +37,7 @@ const FooterComponent = () => (
         activeStyle={{ color: 'blue' }}
       >
         Interests
-      </NavLink>
+      </NavLink> */}
     </ul>
   </footer>
 )
