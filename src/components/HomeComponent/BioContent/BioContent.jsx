@@ -30,7 +30,7 @@ class BioContent extends React.Component {
 
     if(isMobile){
       return (
-        <div className={classes.BioContent}>
+        <div className={classes.Mobile}>
           <InterestList />
           <HeadShot />
           <Biography />

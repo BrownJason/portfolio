@@ -30,3 +30,36 @@
     justify-content: center;
     color: white;
 }
+
+.OuterMobile {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: url(../../images/background.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    padding: 50px 0 0;
+}
+
+.OuterContentMobile {
+    height: 100%;
+    width: 95%;
+    background:  rgba(255,255,255,0.1);
+}
+
+.AboutMeMobile {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.AboutMeMobile h2 {
+    text-shadow: 5px 0 5px  black;
+    font-size: 70px;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    color: white;
+}

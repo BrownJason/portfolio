@@ -20,3 +20,25 @@
 .Headshot a {
     text-decoration: none;
 }
+
+.HeadshotMobile {
+    margin-right: 10px;
+    margin-left: 10px;
+    background: white;
+    padding: 15px;
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+}
+
+.HeadshotMobile span {
+    text-align: center;
+}
+
+.HeadshotMobile img {
+    width: 100%;
+}
+
+.HeadshotMobile a {
+    text-decoration: none;
+}
