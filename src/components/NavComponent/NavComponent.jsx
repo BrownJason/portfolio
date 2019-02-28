@@ -33,7 +33,7 @@ class NavComponent extends Component {
             <ul>
               <NavLink
                 exact
-                to={'/'}
+                to={process.env.PUBLIC_URL}
                 activeStyle={{ color: 'blue' }}
                 className={classes.LinkStylesMobile}
               >
@@ -74,7 +74,7 @@ class NavComponent extends Component {
             <ul>
               <NavLink
                 exact
-                to={'/'}
+                to={process.env.PUBLIC_URL}
                 activeStyle={{ color: 'blue' }}
                 className={classes.LinkStyles}
               >
