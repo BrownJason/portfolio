@@ -19,30 +19,30 @@ class StoryComponent extends Component {
     var divStyle = { backgroundImage: 'url(' + imgUrl + ')'}
   
   
-  return (
-    <div className={classes.Outer} style={divStyle} onClick={this.handleClick}>
-      <div className={classes.OuterContent}>
-        <div className={classes.StoryQuestions}>
-          <ul>
-            {console.log(this.props.questions)}
-            {this.props.questions.map(question => (
-              <Questions
-                key={question.h3}
-                headerText={question.h3}
-                pText={question.p}
-                beforeLink={question.beforeLink}
-                link={question.links}
-                linkText={question.linkText}
-                afterLink={question.afterLink}
-              />
-            ))}
+    return (
+      <div className={classes.Outer} style={divStyle} onClick={this.handleClick}>
+        <div className={classes.OuterContent}>
+          <div className={classes.StoryQuestions}>
+            <ul>
+              {console.log(this.props.questions)}
+              {this.props.questions.map(question => (
+                <Questions
+                  key={question.h3}
+                  headerText={question.h3}
+                  pText={question.p}
+                  beforeLink={question.beforeLink}
+                  link={question.links}
+                  linkText={question.linkText}
+                  afterLink={question.afterLink}
+                />
+              ))}
 
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 }
 
 export default StoryComponent

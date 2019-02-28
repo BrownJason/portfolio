@@ -1,0 +1,8 @@
+{
+    "h3": "Spring Assessment Add Relations/Address",
+    "pBeforeBr": "Adds a user to a specified address only if that current user doesn't have an address already.",
+    "pAfterBr": "Create relations between users if they want to be related",
+    "link": "https://github.com/BrownJason/spring_assessment",
+    "img": "springSnip",
+    "title": "fab fa-java"
+}
