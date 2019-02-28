@@ -10,7 +10,7 @@ class NavComponent extends Component {
           <ul>
             <NavLink
               exact
-              to='/'
+              to={process.env.PUBLIC_URL + '/'}
               activeStyle={{ color: 'blue' }}
               className={LinkStyles}
             >
@@ -18,7 +18,7 @@ class NavComponent extends Component {
             </NavLink>
             <NavLink
               exact
-              to='/Story'
+              to={process.env.PUBLIC_URL + '/Story'}
               activeStyle={{ color: 'blue' }}
               className={LinkStyles}
             >
@@ -26,7 +26,7 @@ class NavComponent extends Component {
             </NavLink>
             <NavLink
               exact
-              to='/Works'
+              to={process.env.PUBLIC_URL + '/Works'}
               activeStyle={{ color: 'blue' }}
               className={LinkStyles}
             >
@@ -34,7 +34,7 @@ class NavComponent extends Component {
             </NavLink>
             <NavLink
               exact
-              to='/Interests'
+              to={process.env.PUBLIC_URL + '/Interests'}
               activeStyle={{ color: 'blue' }}
               className={LinkStyles}
             >
