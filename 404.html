@@ -1,48 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React for GitHub Pages</title>
+  </head>
+  <body>
+    <script type="text/javascript">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+      /////////////////////////////////////////////////////////////////////////
+      // React for GitHub Pages - https://github.com/rafrex/react-github-pages
+      // ----------------------------------------------------------------------
+      // This script takes the current url and converts the path, query and
+      // hash fragment into just a query string, and then redirects the browser
+      // to the new url with only a query string and no path or hash fragment,
+      // e.g. http://www.foo.tld/one/two?a=b&c=d#qwe, becomes
+      // http://www.foo.tld/?redirect=true&pathname=%2Fone%2Ftwo&query=a=b%26c=d&hash=qwe
+      /////////////////////////////////////////////////////////////////////////
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-  <title>React App</title>
-</head>
+      // Remove '&' from text and replace with '%26'
+      function noAmp(text) {
+        return text.split('&').join('%26');
+      }
 
-<body>
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+      // Incase browser doesn't support window.location.origin
+      function getOrigin() {
+        if (window.location.origin) return window.location.origin;
+        return window.location.protocol + "//" + window.location.hostname +
+          (window.location.port ? ':' + window.location.port : '');
+      }
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      var origin = getOrigin();
+      var pathname = noAmp(window.location.pathname.split('/').join('%2F'));
+      var query = noAmp(window.location.search.slice(1));
+      var hash = noAmp(window.location.hash.slice(1));
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-</body>
+      
+      var redirectTo = origin + '/?' +
+        'redirect=true' +
+        '&pathname=' + pathname +
+        '&query=' + query +
+        '&hash=' + hash;
 
+      window.location.replace(redirectTo);
+    </script>
+  </body>
 </html>
