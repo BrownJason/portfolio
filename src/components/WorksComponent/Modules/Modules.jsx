@@ -8,8 +8,8 @@ const Modules = props => {
       <a href={`${props.link}`}>
         <div className={classes.ModuleContent}>
           <span>
-              <i class={props.icon}/>&nbsp;&nbsp;
-              {props.headerText}
+            <i class={props.icon}/>&nbsp;&nbsp;
+            {props.headerText}
           </span>
           <img src={require(`../../../images/${props.img}.PNG`)} alt='' />
           <p>{props.pBefore}<br />{props.pAfter}</p>
