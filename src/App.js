@@ -43,19 +43,19 @@ class App extends Component {
     return (
       <div className='App' id='home'>
         <NavComponent />
-        <Route exact path={process.env.PUBLIC_URL + '/'} component={HomeComponent} />
+        <Route exact path={'/'} component={HomeComponent} />
         <Route
           exact
-          path={process.env.PUBLIC_URL + '/Story'}
+          path={'/Story'}
           render={() => <StoryComponent questions={this.state.questions} />}
         />
         <Route 
         exact 
-        path={process.env.PUBLIC_URL + '/Works'} 
+        path={'/Works'} 
         render={() => <WorksComponent modules={this.state.modules} />}/>
         <Route 
         exact 
-        path={process.env.PUBLIC_URL + '/Interests'} 
+        path={'/Interests'} 
         component={InterestComponent} />
         <FooterComponent />
       </div>
