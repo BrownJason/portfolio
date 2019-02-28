@@ -1,0 +1,7 @@
+{
+    "h3": "JavaScrip Quizler Choose Random",
+    "pBeforeBr": "Implement Choose Random function that would pick any given item / items in your array from user input; given that it wasn't empty but if it was empty, just return that empty array.",
+    "link": "https://github.com/BrownJason/quizler",
+    "img": "javaScriptSnip",
+    "title": "fab fa-node-js"
+}

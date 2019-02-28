@@ -15,6 +15,11 @@ import questions5 from './StoryQuestions/questions5.json'
 import questions6 from './StoryQuestions/questions6.json'
 import questions7 from './StoryQuestions/questions7.json'
 
+import modules1 from './WorksText/modules1.json'
+import modules2 from './WorksText/modules2.json'
+import modules3 from './WorksText/modules3.json'
+import modules4 from './WorksText/modules4.json'
+
 class App extends Component {
   state = {
     questions: [
@@ -25,6 +30,12 @@ class App extends Component {
       questions5,
       questions6,
       questions7
+    ],
+    modules: [
+      modules1,
+      modules2,
+      modules3,
+      modules4
     ]
   }
 
@@ -38,7 +49,7 @@ class App extends Component {
           path='/Story'
           render={() => <StoryComponent questions={this.state.questions} />}
         />
-        <Route exact path='/Works' component={WorksComponent} />
+        <Route exact path='/Works' render={() => <WorksComponent modules={this.state.modules} />}/>
         <Route exact path='/Interests' component={InterestComponent} />
         <FooterComponent />
       </div>
