@@ -30,6 +30,7 @@ const Works = styled.div`
   ${media.lessThan('small')`
     flex-direction: column;
     padding: 1em;
+    padding-right: 3em;
     padding-top: 4em;
     margin: 10px;
     height: 100%;
