@@ -25,7 +25,7 @@ const Works = styled.div`
     flex-direction: column;
     padding-top: 4em;
     height: 100%;
-    width: 100%;
+    width: 80%;
   `}
 `;
 
