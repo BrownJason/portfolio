@@ -13,25 +13,23 @@ const Outer = styled.div`
   display: flex;
   justify-content: space-between;
   ${media.lessThan('medium')`
+    display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: 175px;
+    margin-top: 150px;
     width: 100%;
   `}
 `;
 
 const OuterDiv = styled.div`
-  width: 100%;
-  height: 100%;
-  margin-top: 25px;
-  margin-bottom: 25px;
   ${media.lessThan('medium')`
+    justify-content: center;
     flex-direction: column;
     margin-top: 25px;
     margin-bottom: 25px;
     width: 100%;
-    height: 75%;
+    height: 65%;
   `}
 `;
 

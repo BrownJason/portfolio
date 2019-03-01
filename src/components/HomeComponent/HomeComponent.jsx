@@ -18,6 +18,11 @@ const Outer = styled.div`
   `}
 `;
 
+const OuterContent = styled.div`
+  height: 100%;
+  width: 100%;
+`;
+
 const AboutMe = styled.div`
   width: 100%;
   height: 100px;
@@ -26,7 +31,7 @@ const AboutMe = styled.div`
   ${media.lessThan('medium')`
     flex-direction: column;
     justify-content: center;
-    height: 100px;
+    height: 100%;
     width: 100%;
   `}
 `;
@@ -53,12 +58,12 @@ class HomeComponent extends Component {
   render () {
     return (
       <Outer>
-        <div>
+        <OuterContent>
           <AboutMe>
             <Header>Jason Brown</Header>
           </AboutMe>
           <BioContent />
-        </div>
+        </OuterContent>
       </Outer>
     );
   }
