@@ -12,7 +12,7 @@ const InnerStore = styled.div`
   border-radius: 15px;
   ${media.lessThan('small')`
     padding: 0;
-    margin-left: -15px;
+    margin-left: -5px;
     height: 100%;
     width: 100%;
   `}
