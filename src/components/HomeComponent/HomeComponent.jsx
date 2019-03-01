@@ -21,6 +21,7 @@ const Outer = styled.div`
 const OuterContent = styled.div`
   height: 100%;
   width: 100%;
+  padding: 1em;
 `;
 
 const AboutMe = styled.div`
