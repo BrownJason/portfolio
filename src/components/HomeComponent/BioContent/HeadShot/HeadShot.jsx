@@ -16,6 +16,11 @@ const Outer = styled.div`
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  ${media.lessThan('small')`
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  `}
 `;
 
 const Headshot = styled.img`
@@ -25,12 +30,12 @@ const Headshot = styled.img`
   width: 100%;
   height: 100%;
   ${media.lessThan('small')`
-        flex-direction: column;
-        background-image: url(${headshot});
-        background-repeat: repeat;
-        background-size: 100%;
-        height: 100%;
-        width: 100%;
+    flex-direction: column;
+    background-image: url(${headshot});
+    background-repeat: repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
   `}
 `;
 
