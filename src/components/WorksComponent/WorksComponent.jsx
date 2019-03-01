@@ -23,8 +23,6 @@ const Works = styled.div`
   padding-top: 4em;
   ${media.lessThan('medium')`
     flex-direction: column;
-    padding-left: 2em;
-    padding-right: 2em;
     padding-top: 4em;
     height: 100%;
     width: 70%;
