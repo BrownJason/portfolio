@@ -15,6 +15,9 @@ const InnerStore = styled.section`
   padding: 1em;
   background: white;
   border-radius: 15px;
+  ${media.lessThan('small')`
+    padding: 0;
+  `}
 `;
 
 const BackgroundImg = styled.div`

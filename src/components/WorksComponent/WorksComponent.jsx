@@ -33,7 +33,7 @@ const Works = styled.div`
     padding-right: 2em;
     padding-top: 4em;
     height: 100%;
-    width: 80%;
+    width: 70%;
   `}
 `;
 
