@@ -18,6 +18,7 @@ const Outer = styled.div`
   border-radius: 10px;
   ${media.lessThan('small')`
     flex-direction: column;
+    display: flex;
     height: 100%;
     width: 100%;
   `}
@@ -30,7 +31,6 @@ const Headshot = styled.img`
   width: 100%;
   height: 100%;
   ${media.lessThan('small')`
-    flex-direction: column;
     background-image: url(${headshot});
     background-repeat: repeat;
     background-size: 100%;
