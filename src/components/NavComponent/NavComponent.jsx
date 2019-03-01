@@ -9,11 +9,6 @@ const Link = styled(NavLink)`
   text-decoration: none;
   list-style: none;
   color: black;
-  ${media.lessThan('small')`
-    justify-content: flex-start;
-    margin: auto;
-    maring-left: -10px;
-  `}
 `;
 
 const Outer = styled.div`
@@ -54,28 +49,28 @@ class NavComponent extends Component {
               to={'/'}
               activeStyle={{ color: 'blue' }}
             >
-              <i className="fa fa-home">&nbsp;&nbsp;Home</i>
+              <i className='fa fa-home'>&nbsp;&nbsp;Home</i>
             </Link>
             <Link
               exact
               to={'/Story'}
               activeStyle={{ color: 'blue' }}
             >
-              <i className="fa fa-book">&nbsp;&nbsp;Story</i>
+              <i className='fa fa-book'>&nbsp;&nbsp;Story</i>
             </Link>
             <Link
               exact
               to={'/Works'}
               activeStyle={{ color: 'blue' }}
             >
-              <i className="fa fa-archive">&nbsp;&nbsp;Works</i>
+              <i className='fa fa-archive'>&nbsp;&nbsp;Works</i>
             </Link>
             <Link
               exact
               to={'/Interests'}
               activeStyle={{ color: 'blue' }}
             >
-              <i className="fa fa-gamepad">&nbsp;&nbsp;Interests</i>
+              <i className='fa fa-gamepad'>&nbsp;&nbsp;Interests</i>
             </Link>
           </UList>
         </NavBar>
