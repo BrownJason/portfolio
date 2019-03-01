@@ -56,7 +56,7 @@ const Header = styled.h2`
   color: white;
   ${media.lessThan('small')`
     display: flex;
-    justify-content: center;
+    text-align: center;
     margin: 0;
     text-shadow: 5px 0 5px  black;
     font-size: 55px;
