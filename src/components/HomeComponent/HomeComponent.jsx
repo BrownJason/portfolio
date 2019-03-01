@@ -15,8 +15,9 @@ const Outer = styled.div`
   background-size: 100%;
   padding: 50px 0 0;
   ${media.between('small', 'medium')`
-  text-align: center;
+    text-align: center;
     flex-direction: column;
+    background-image: url(${bkgImage});
     background-repeat: repeat;
     background-size: 100%;
     height: 100%;
@@ -28,7 +29,7 @@ const OuterContent = styled.div`
   height: 100%;
   width: 100%;
   ${media.lessThan('small')`
-  text-align: center;
+   text-align: center;
     height: 100%;
     width: 100%;
   `}
@@ -40,7 +41,7 @@ const AboutMe = styled.div`
   display: flex;
   justify-content: center;
   ${media.lessThan('small')`
-  text-align: center;
+    text-align: center;
     display: flex;
     justify-content: center;
     height: 100%;
