@@ -27,7 +27,7 @@ const Outer = styled.div`
 const OuterContent = styled.div`
   height: 100%;
   width: 100%;
-  ${media.between('small', 'medium')`
+  ${media.lessThan('small')`
     height: 100%;
     width: 100%;
   `}
@@ -38,7 +38,7 @@ const AboutMe = styled.div`
   height: 100px;
   display: flex;
   justify-content: center;
-  ${media.between('small', 'medium')`
+  ${media.lessThan('small')`
     display: flex;
     justify-content: center;
     height: 100%;
@@ -54,7 +54,7 @@ const Header = styled.h2`
   margin: 0;
   justify-content: center;
   color: white;
-  ${media.between('small', 'medium')`
+  ${media.lessThan('small')`
     display: flex;
     justify-content: center;
     margin: 0;
