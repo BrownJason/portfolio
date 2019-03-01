@@ -11,7 +11,7 @@ const Outer = styled.div`
   display: flex;
   justify-content: center;
   padding: 50px 0 0;
-  ${media.between('small', 'medium')`
+  ${media.lessThan('small')`
     text-align: center;
     flex-direction: column;
     height: 100%;
