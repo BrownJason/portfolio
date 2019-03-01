@@ -1,45 +1,81 @@
-import React from 'react'
-// import { NavLink } from 'react-router-dom'
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import media from 'styled-media-query';
 
-import { LinkStyles, Footer } from './FooterComponent.css'
+const slide = keyframes`
+  from { transform: translate3d(1200px, 20px, 0);  }
+  to   { transform: translate3d(-1200px, 20px, 20px); }
+  ${media.lessThan('medium')`
+    
+  from { transform: translate3d(80px, 20px, 0);  }
+  to   { transform: translate3d(-100px, 20px, 20px); }
+  `}
+`;
 
-const FooterComponent = () => (
-  <footer className={Footer}>
-    <ul>
-      <li>
-        © 2018 Copyright Jason Brown
-      </li>
-      {/* <NavLink
-        exact
-        to='/'
-        className={LinkStyles}
-        activeStyle={{ color: 'blue' }}
-      >
-        Home
-      </NavLink>
-      <NavLink
-        to='/Story'
-        className={LinkStyles}
-        activeStyle={{ color: 'blue' }}
-      >
-        Story
-      </NavLink>
-      <NavLink
-        to='/Works'
-        className={LinkStyles}
-        activeStyle={{ color: 'blue' }}
-      >
-        Works
-      </NavLink>
-      <NavLink
-        to='/Interests'
-        className={LinkStyles}
-        activeStyle={{ color: 'blue' }}
-      >
-        Interests
-      </NavLink> */}
-    </ul>
-  </footer>
-)
+const InvisibleSquare = styled.div` 
+  width: 35px;
+  height: 18px;
+  margin-top: -10px;
+  background: transparent;
+  border: 4px solid black;
+  border-radius: 4px;
+  animation: ${slide} 10s linear infinite;
+`;
 
-export default FooterComponent
+const Window = styled.div`
+  width: 10px;
+  height: 7px;
+  background-color: white;
+  border-radius: 7px;
+  animation: ${slide} 10s linear infinite;
+`;
+
+const Ball = styled.div`
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;  
+  margin-left: -5px;
+  margin-right: -5px;
+  background-color: #FF5722;
+  animation: ${slide} 10s linear infinite;
+`;
+
+const Ul = styled.ul`
+  display: inline-flex;
+  margin-top: 15px;
+  list-style: none;
+  color: black;
+  font-size: 10px;
+`;
+
+const Footer = styled.footer`
+  background: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  z-index: 1001;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+`;
+
+class FooterComponent extends React.Component {
+  render () {
+    return (
+      <Footer>
+        <Ul>
+          <li>© 2018 Copyright Jason Brown</li>
+          <Ball />
+          <InvisibleSquare>
+            <Window />
+          </InvisibleSquare>
+          <Ball />
+        </Ul>
+      </Footer>
+    );
+  }
+}
+
+export default FooterComponent;

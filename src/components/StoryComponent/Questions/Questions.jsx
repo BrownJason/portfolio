@@ -1,14 +1,38 @@
-import React,{Fragment} from 'react'
+import React, { Fragment } from 'react';
+import styled from 'styled-components';
 
-import classes from './Questions.css'
+const Paragraph = styled.p`
+  color: black;
+`;
+
+const Header = styled.h3`
+  color: black;
+`;
+
+const Links = styled.a`
+  color: blue;
+`;
 
 const Questions = props => {
   return (
-    <li className={classes.Questions}>
-      <h3>{props.headerText}</h3>
-      {props.pText ? <p>{props.pText}</p> : <Fragment><p>{props.beforeLink}<a href={`${props.link}`}> {props.linkText} </a>{props.afterLink}</p></Fragment>}
+    <li>
+      <Header>{props.headerText}</Header>
+      {props.pText ? (
+        <Paragraph>{props.pText}</Paragraph>
+      ) : (
+        <Fragment>
+          <Paragraph>
+            {props.beforeLink}
+            <Links as='a' href={`${props.link}`}>
+              {' '}
+              {props.linkText}{' '}
+            </Links>
+            {props.afterLink}
+          </Paragraph>
+        </Fragment>
+      )}
     </li>
-  )
-}
+  );
+};
 
-export default Questions
+export default Questions;
