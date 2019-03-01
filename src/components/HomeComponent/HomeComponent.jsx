@@ -71,7 +71,7 @@ const Header = styled.h2`
 `;
 
 class HomeComponent extends Component {
-  render() {
+  render () {
     return (
       <Outer>
         <OuterContent>
