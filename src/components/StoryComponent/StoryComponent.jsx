@@ -38,24 +38,22 @@ class StoryComponent extends Component {
   render () {
     return (
       <BackgroundImg>
-        <div>
-          <InnerStore>
-            <ul>
-              {console.log(this.props.questions)}
-              {this.props.questions.map(question => (
-                <Questions
-                  key={question.h3}
-                  headerText={question.h3}
-                  pText={question.p}
-                  beforeLink={question.beforeLink}
-                  link={question.links}
-                  linkText={question.linkText}
-                  afterLink={question.afterLink}
-                />
-              ))}
-            </ul>
-          </InnerStore>
-        </div>
+        <InnerStore>
+          <ul>
+            {console.log(this.props.questions)}
+            {this.props.questions.map(question => (
+              <Questions
+                key={question.h3}
+                headerText={question.h3}
+                pText={question.p}
+                beforeLink={question.beforeLink}
+                link={question.links}
+                linkText={question.linkText}
+                afterLink={question.afterLink}
+              />
+            ))}
+          </ul>
+        </InnerStore>
       </BackgroundImg>
     );
   }
