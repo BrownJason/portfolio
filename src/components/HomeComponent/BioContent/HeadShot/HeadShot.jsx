@@ -31,8 +31,7 @@ const Headshot = styled.img`
   width: 100%;
   height: 100%;
   ${media.lessThan('small')`
-    background-image: url(${headshot});
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: 100%;
     height: 100%;
     width: 100%;

@@ -17,7 +17,6 @@ const Outer = styled.div`
   ${media.between('small', 'medium')`
   text-align: center;
     flex-direction: column;
-    background-image: url(${bkgImage});
     background-repeat: repeat;
     background-size: 100%;
     height: 100%;

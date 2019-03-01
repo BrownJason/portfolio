@@ -23,6 +23,7 @@ const Outer = styled.div`
 const OuterInner = styled.div`
   height: 100%;
   width: 100%;
+
 `;
 
 const Works = styled.div`
@@ -31,7 +32,7 @@ const Works = styled.div`
   padding-top: 4em;
   ${media.lessThan('small')`
     flex-direction: column;
-    padding: 2.5em;
+    padding: 0;
     height: 100%;
     width: 100%;
   `}
