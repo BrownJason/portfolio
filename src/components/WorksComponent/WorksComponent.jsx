@@ -9,9 +9,6 @@ const Outer = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 3em;
-  background: url(../../images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
   ${media.lessThan('small')`
     flex-direction: column;
     padding-top: 2em;
@@ -32,7 +29,7 @@ const Works = styled.div`
   padding-top: 4em;
   ${media.lessThan('small')`
     flex-direction: column;
-    padding: 0;
+    padding: 1em;
     height: 100%;
     width: 100%;
   `}

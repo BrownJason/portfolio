@@ -30,12 +30,6 @@ const Headshot = styled.img`
   background-size: 100%;
   width: 100%;
   height: 100%;
-  ${media.lessThan('small')`
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 100%;
-    width: 100%;
-  `}
 `;
 
 const Resume = styled.a`
