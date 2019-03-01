@@ -1,45 +1,48 @@
-import React from 'react'
-import classes from './WorksComponent.css'
-// import JavaModule from './JavaModule/JavaModuel'
-// import SpringModule from './SpringModule/SpringModule'
-// import ReactModule from './ReactModule/ReactModule'
-// import JSModule from './JavaScripModule/JSModule'
+import React from 'react';
+import styled from 'styled-components';
+import media from 'styled-media-query';
+import Modules from './Modules/Modules';
 
-import Modules from './Modules/Modules'
+const Outer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+  background: url(../../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  ${media.lessThan('medium')`
+    flex-direction: column;
+    padding-top: 2em;
+    height: 100%;
+    width: 100%;
+  `}
+`;
+
+const OuterInner = styled.div`
+  height: 100%;
+  width: 100%;
+`;
+
+const Works = styled.div`
+  display: flex;
+  padding: 1em;
+  padding-top: 4em;
+  ${media.lessThan('medium')`
+    flex-direction: column;
+    padding: 2.5em;
+    height: 100%;
+    width: 100%;
+  `}
+`;
 
 class WorksComponent extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      width: window.innerWidth,
-    };
-  }
-
-  componentWillMount() {
-    window.addEventListener('resize', this.handleWindowSizeChange);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleWindowSizeChange);
-  }
-
-  handleWindowSizeChange = () => {
-    this.setState({ width: window.innerWidth});
-  };
-
   render () {
-    const { width } = this.state;
-    const isMobile = width <= 500;
-
-    if(isMobile){
-      return (
-        <div></div>
-      );
-    } else {
-      return (
-      <div className={classes.Outer}>
-        <div className={classes.OuterContent}>
-          <div className={classes.Inner}>
+    return (
+      <Outer>
+        <OuterInner>
+          <Works>
             {this.props.modules.map(modules => (
               <Modules
                 key={modules.h3}
@@ -49,64 +52,15 @@ class WorksComponent extends React.Component {
                 pAfter={modules.pAfterBr}
                 link={modules.link}
                 img={modules.img}
-              >{modules.h3}</Modules>
+              >
+                {modules.h3}
+              </Modules>
             ))}
-          </div>
-        </div>
-      </div>
-      );
-    }
+          </Works>
+        </OuterInner>
+      </Outer>
+    );
   }
 }
-
-// class WorksComponent extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       width: window.innerWidth,
-//     };
-//   }
-
-//   componentWillMount() {
-//     window.addEventListener('resize', this.handleWindowSizeChange);
-//   }
-
-//   componentWillUnmount() {
-//     window.removeEventListener('resize', this.handleWindowSizeChange);
-//   }
-
-//   handleWindowSizeChange = () => {
-//     this.setState({ width: window.innerWidth});
-//   };
-
-//   render () {
-//     const { width } = this.state;
-//     const isMobile = width <= 500;
-
-//     if(isMobile){
-//       return (
-//         <div className={classes.Mobile}>
-//           <JSModule />
-//           <ReactModule />
-//           <SpringModule />
-//           <JavaModule />
-//         </div>
-//       );
-//     } else {
-//       return (
-//         <div className={classes.Outer}>
-//           <div className={classes.OuterContent}>
-//             <div className={classes.Inner}>
-//               <JSModule />
-//               <ReactModule />
-//               <SpringModule />
-//               <JavaModule />
-//             </div>
-//           </div>
-//         </div>
-//       );
-//     }
-//   }
-// }
 
 export default WorksComponent;
