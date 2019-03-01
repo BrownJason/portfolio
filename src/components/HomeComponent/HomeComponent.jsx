@@ -16,19 +16,7 @@ const Outer = styled.div`
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding: 0;
-  `}
-`;
-
-const OuterContent = styled.div`
-  height: 100%;
-  width: 100%;
-  ${media.lessThan('small')`
-  display: flex;
-   text-align: center;
-   flex-direction: column;
-    height: 100%;
-    width: 100%;
+    padding: 50px 0 0;
   `}
 `;
 
@@ -74,12 +62,10 @@ class HomeComponent extends Component {
   render () {
     return (
       <Outer>
-        <OuterContent>
-          <AboutMe>
-            <Header>Jason Brown</Header>
-          </AboutMe>
-          <BioContent />
-        </OuterContent>
+        <AboutMe>
+          <Header>Jason Brown</Header>
+        </AboutMe>
+        <BioContent />
       </Outer>
     );
   }
