@@ -29,8 +29,8 @@ const NavBar = styled.nav`
   justify-content: flex-start;
   margin: auto;
   border-bottom: 5px solid black;
-  text-decoration: none;
-  list-style: none;
+  text-decoration: none !important;
+  list-style: none !important;
 `;
 
 class NavComponent extends Component {

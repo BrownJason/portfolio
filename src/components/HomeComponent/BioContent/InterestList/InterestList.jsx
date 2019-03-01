@@ -19,8 +19,8 @@ const LinkedList = styled.div`
 const List = styled.li`
   font-size: 28pt;
   padding-bottom: 5px;
-  text-decoration: none;
-  list-style: none;
+  text-decoration: none !important;
+  list-style: none !important;
   margin-left: -50px;
   ${media.lessThan('medium')`
     font-size: 14pt;
@@ -33,8 +33,8 @@ const Right = styled.li`
   padding-bottom: 5px;
   float: right;
   margin-right: 15px;
-  text-decoration: none;
-  list-style: none;
+  text-decoration: none !important;
+  list-style: none !important;
   ${media.lessThan('medium')`
     font-size: 14pt;
     margin-right: 15px;
