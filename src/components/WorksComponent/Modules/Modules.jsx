@@ -14,8 +14,8 @@ const Outer = styled.div`
   ${media.lessThan('medium')`
     height: 100%;
     padding: 10px;
+    margin: auto;
     margin-bottom: 50px;
-    margin-left: -15px;
     text-decoration: none;
     width: 100%;
   `}
