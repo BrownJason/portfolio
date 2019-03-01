@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 const Link = styled(NavLink)`
   font-size: 14pt;
@@ -32,6 +33,10 @@ const NavBar = styled.nav`
 const UList = styled.ul`
   display: inline-flex;
   margin-top: 10px;
+  ${media.lessThan('small')`
+    justify-content: flex-start;
+    margin: auto;
+  `}
 `;
 
 class NavComponent extends Component {
