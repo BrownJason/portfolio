@@ -9,7 +9,11 @@ const Link = styled(NavLink)`
   text-decoration: none;
   list-style: none;
   color: black;
-
+  ${media.lessThan('small')`
+    justify-content: flex-start;
+    margin: auto;
+    padding-left: 0;
+  `}
 `;
 
 const Outer = styled.div`
