@@ -9,6 +9,8 @@ const Link = styled(NavLink)`
   text-decoration: none;
   list-style: none;
   color: black;
+  display: inline-flex;
+  margin-top: 10px;
 `;
 
 const Outer = styled.div`
@@ -29,50 +31,23 @@ const NavBar = styled.nav`
   border-bottom: 5px solid black;
 `;
 
-const UList = styled.ul`
-  display: inline-flex;
-  margin-top: 10px;
-  ${media.lessThan('medium')`
-    justify-content: flex-start;
-    margin: auto;
-  `}
-`;
-
 class NavComponent extends Component {
   render () {
     return (
       <Outer>
         <NavBar>
-          <UList>
-            <Link
-              exact
-              to={'/'}
-              activeStyle={{ color: 'blue' }}
-            >
-              <i className='fa fa-home'>&nbsp;&nbsp;Home</i>
-            </Link>
-            <Link
-              exact
-              to={'/Story'}
-              activeStyle={{ color: 'blue' }}
-            >
-              <i className='fa fa-book'>&nbsp;&nbsp;Story</i>
-            </Link>
-            <Link
-              exact
-              to={'/Works'}
-              activeStyle={{ color: 'blue' }}
-            >
-              <i className='fa fa-archive'>&nbsp;&nbsp;Works</i>
-            </Link>
-            <Link
-              exact
-              to={'/Interests'}
-              activeStyle={{ color: 'blue' }}
-            >
-              <i className='fa fa-gamepad'>&nbsp;&nbsp;Interests</i>
-            </Link>
-          </UList>
+          <Link exact to={'/'} activeStyle={{ color: 'blue' }}>
+            <i className="fa fa-home">&nbsp;&nbsp;Home</i>
+          </Link>
+          <Link exact to={'/Story'} activeStyle={{ color: 'blue' }}>
+            <i className="fa fa-book">&nbsp;&nbsp;Story</i>
+          </Link>
+          <Link exact to={'/Works'} activeStyle={{ color: 'blue' }}>
+            <i className="fa fa-archive">&nbsp;&nbsp;Works</i>
+          </Link>
+          <Link exact to={'/Interests'} activeStyle={{ color: 'blue' }}>
+            <i className="fa fa-gamepad">&nbsp;&nbsp;Interests</i>
+          </Link>
         </NavBar>
       </Outer>
     );

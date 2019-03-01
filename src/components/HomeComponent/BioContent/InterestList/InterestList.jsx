@@ -5,12 +5,12 @@ import media from 'styled-media-query';
 const LinkedList = styled.div`
   margin-top: 50px;
   width: 500px;
+  flex-direction: column;
   ${media.lessThan('medium')`
-    flex-direction: column;
+  flex-direction: column;
     margin-top: 0px;
     margin-bottom: 10px;
     margin-right: 10px;
-    padding-left: -10em;
     height: 100%;
     width: 100%;
   `}
@@ -21,10 +21,9 @@ const List = styled.li`
   padding-bottom: 5px;
   text-decoration: none;
   list-style: none;
+  margin-left: 15px;
   ${media.lessThan('medium')`
-    flex-direction: column;
     font-size: 14pt;
-    margin-left: -25px;
   `}
 `;
 
@@ -33,11 +32,9 @@ const Right = styled.li`
   padding-bottom: 5px;
   float: right;
   margin-right: 15px;
-  text-decoration: none;
-  list-style: none;
   ${media.lessThan('medium')`
-    flex-direction: column;
     font-size: 14pt;
+    margin-right: 15px;
   `}
 `;
 
@@ -46,8 +43,6 @@ const UL = styled.ul`
 
 const Links = styled.a`
   color: white;
-  text-decoration: none;
-  list-style: none;
 `;
 
 class InterestList extends React.Component {
@@ -61,23 +56,23 @@ class InterestList extends React.Component {
               <i className={`fa fa-gamepad `} />
             </Links>
           </List>
-          <Right>
+          <List>
             <Links href="https://www.facebook.com/groups/311739072291023/">
               Golf <i className={`fas fa-golf-ball`} />
             </Links>
-          </Right>
+          </List>
           <List>
             <Links href="https://www.facebook.com/groups/BrownFamilyLeague/">
               Bowling{' '}
               <i className={`fas fa-bowling-ball`} />
             </Links>
           </List>
-          <Right>
+          <List>
             <Links href="https://github.com/BrownJason">
               Aspiring Developer{' '}
               <i className={`fas fa-server`} />
             </Links>
-          </Right>
+          </List>
         </UL>
       </LinkedList>
     );

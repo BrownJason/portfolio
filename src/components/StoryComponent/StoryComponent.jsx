@@ -13,7 +13,7 @@ const InnerStore = styled.div`
   height: 100%;
   width: 100%;
   ${media.lessThan('medium')`
-    padding: 0;
+    padding: 1em;
     margin-left: -15px;
     height: 100%;
     width: 100%;
