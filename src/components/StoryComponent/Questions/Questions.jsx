@@ -15,27 +15,33 @@ const Links = styled.a`
 
 const List = styled.li`
   width: 100%;
-`
+`;
+
+const Divider = styled.div`
+  width: 100%;
+`;
 
 const Questions = props => {
   return (
-    <List>
-      <Header>{props.headerText}</Header>
-      {props.pText ? (
-        <Paragraph>{props.pText}</Paragraph>
-      ) : (
-        <Fragment>
-          <Paragraph>
-            {props.beforeLink}
-            <Links as='a' href={`${props.link}`}>
-              {' '}
-              {props.linkText}{' '}
-            </Links>
-            {props.afterLink}
-          </Paragraph>
-        </Fragment>
-      )}
-    </List>
+    <Divider>
+      <List>
+        <Header>{props.headerText}</Header>
+        {props.pText ? (
+          <Paragraph>{props.pText}</Paragraph>
+        ) : (
+          <Fragment>
+            <Paragraph>
+              {props.beforeLink}
+              <Links as="a" href={`${props.link}`}>
+                {' '}
+                {props.linkText}{' '}
+              </Links>
+              {props.afterLink}
+            </Paragraph>
+          </Fragment>
+        )}
+      </List>
+    </Divider>
   );
 };
 
