@@ -12,7 +12,7 @@ const InnerStore = styled.div`
   border-radius: 15px;
   height: 100%;
   width: 100%;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     padding: 0;
     margin-left: -15px;
     height: 100%;
@@ -28,7 +28,7 @@ const BackgroundImg = styled.div`
   padding: 4em;
   height: 100vh;
   width: 100%;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     height: 100%;
     width: 100%;
   `}

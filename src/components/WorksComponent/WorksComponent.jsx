@@ -9,7 +9,7 @@ const Outer = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 3em;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     flex-direction: column;
     padding-top: 2em;
     height: 100%;
@@ -21,7 +21,7 @@ const Works = styled.div`
   display: flex;
   padding: 1em;
   padding-top: 4em;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     flex-direction: column;
     padding-left: 2em;
     padding-right: 2em;

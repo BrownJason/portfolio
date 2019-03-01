@@ -12,7 +12,7 @@ const Outer = styled.div`
   margin-right: 40px;
   display: flex;
   justify-content: space-between;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     flex-direction: column;
     height: 100%;
     width: 100%;
