@@ -6,17 +6,13 @@ import Questions from './Questions/Questions';
 
 import currentImg from '../../images/detroit.jpg';
 
-const Outer = styled.section`
-  padding: 4em;
-  background: white;
-`;
-
 const InnerStore = styled.section`
   padding: 1em;
   background: white;
   border-radius: 15px;
   ${media.lessThan('small')`
     padding: 0;
+    margin-left: -15px;
   `}
 `;
 
