@@ -17,12 +17,6 @@ const Outer = styled.div`
   `}
 `;
 
-const OuterInner = styled.div`
-  height: 100%;
-  width: 100%;
-
-`;
-
 const Works = styled.div`
   display: flex;
   padding: 1em;
@@ -41,23 +35,21 @@ class WorksComponent extends React.Component {
   render () {
     return (
       <Outer>
-        <OuterInner>
-          <Works>
-            {this.props.modules.map(modules => (
-              <Modules
-                key={modules.h3}
-                headerText={modules.h3}
-                icon={modules.title}
-                pBefore={modules.pBeforeBr}
-                pAfter={modules.pAfterBr}
-                link={modules.link}
-                img={modules.img}
-              >
-                {modules.h3}
-              </Modules>
-            ))}
-          </Works>
-        </OuterInner>
+        <Works>
+          {this.props.modules.map(modules => (
+            <Modules
+              key={modules.h3}
+              headerText={modules.h3}
+              icon={modules.title}
+              pBefore={modules.pBeforeBr}
+              pAfter={modules.pAfterBr}
+              link={modules.link}
+              img={modules.img}
+            >
+              {modules.h3}
+            </Modules>
+          ))}
+        </Works>
       </Outer>
     );
   }
