@@ -13,9 +13,13 @@ const Links = styled.a`
   color: blue;
 `;
 
+const List = styled.li`
+  width: 100%;
+`
+
 const Questions = props => {
   return (
-    <li>
+    <List>
       <Header>{props.headerText}</Header>
       {props.pText ? (
         <Paragraph>{props.pText}</Paragraph>
@@ -31,7 +35,7 @@ const Questions = props => {
           </Paragraph>
         </Fragment>
       )}
-    </li>
+    </List>
   );
 };
 

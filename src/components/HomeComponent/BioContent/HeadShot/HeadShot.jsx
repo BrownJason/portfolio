@@ -17,8 +17,6 @@ const Outer = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   ${media.lessThan('medium')`
-    flex-direction: column;
-    display: flex;
     height: 100%;
     width: 100%;
   `}
@@ -27,16 +25,9 @@ const Outer = styled.div`
 const Headshot = styled.img`
   background-image: url(${headshot});
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   width: 100%;
   height: 100%;
-  ${media.lessThan('medium')`
-  background-image: url(${headshot});
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 100%;
-    width: 100%;
-  `}
 `;
 
 const Resume = styled.a`
