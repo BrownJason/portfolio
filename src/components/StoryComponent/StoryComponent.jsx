@@ -6,7 +6,7 @@ import Questions from './Questions/Questions';
 
 import currentImg from '../../images/detroit.jpg';
 
-const InnerStore = styled.section`
+const InnerStore = styled.div`
   padding: 1em;
   background: white;
   border-radius: 15px;
