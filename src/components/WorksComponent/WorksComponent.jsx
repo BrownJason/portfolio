@@ -29,10 +29,9 @@ const Works = styled.div`
   padding-top: 4em;
   ${media.lessThan('small')`
     flex-direction: column;
-    padding: 1em;
-    padding-right: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
     padding-top: 4em;
-    margin: 10px;
     height: 100%;
     width: 100%;
   `}
