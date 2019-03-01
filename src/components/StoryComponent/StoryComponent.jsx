@@ -13,6 +13,8 @@ const InnerStore = styled.div`
   ${media.lessThan('small')`
     padding: 0;
     margin-left: -15px;
+    height: 100%;
+    width: 100%;
   `}
 `;
 
