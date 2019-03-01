@@ -14,7 +14,7 @@ const Outer = styled.div`
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 50px 0 0;
-  ${media.lessThan('medium')`
+  ${media.between('small', 'medium')`
     flex-direction: column;
     background-image: url(${bkgImage});
     background-repeat: repeat;
@@ -27,7 +27,7 @@ const Outer = styled.div`
 const OuterContent = styled.div`
   height: 100%;
   width: 100%;
-  ${media.lessThan('medium')`
+  ${media.between('small', 'medium')`
     height: 100%;
     width: 100%;
   `}
@@ -38,7 +38,7 @@ const AboutMe = styled.div`
   height: 100px;
   display: flex;
   justify-content: center;
-  ${media.lessThan('medium')`
+  ${media.between('small', 'medium')`
     display: flex;
     justify-content: center;
     height: 100%;
@@ -54,7 +54,7 @@ const Header = styled.h2`
   margin: 0;
   justify-content: center;
   color: white;
-  ${media.lessThan('medium')`
+  ${media.between('small', 'medium')`
     display: flex;
     justify-content: center;
     margin: 0;

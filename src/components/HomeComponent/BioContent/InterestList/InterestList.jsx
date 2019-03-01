@@ -5,7 +5,7 @@ import media from 'styled-media-query';
 const LinkedList = styled.div`
   margin-top: 50px;
   width: 500px;
-  ${media.lessThan('medium')`
+  ${media.between('small', 'medium')`
     flex-direction: column;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -21,7 +21,7 @@ const List = styled.li`
   padding-bottom: 5px;
   text-decoration: none;
   list-style: none;
-  ${media.lessThan('medium')`
+  ${media.between('small', 'medium')`
     flex-direction: column;
     font-size: 14pt;
     margin-left: -25px;
@@ -35,7 +35,7 @@ const Right = styled.li`
   margin-right: 15px;
   text-decoration: none;
   list-style: none;
-  ${media.lessThan('medium')`
+  ${media.between('small', 'medium')`
     flex-direction: column;
     font-size: 14pt;
   `}
