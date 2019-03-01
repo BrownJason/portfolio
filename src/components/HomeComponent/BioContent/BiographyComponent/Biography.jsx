@@ -17,7 +17,7 @@ const BioRight = styled.div`
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
   border-radius: 10px;
-  ${media.between('small', 'medium')`
+  ${media.lessThan('small')`
     flex-direction: column;
     background: rgba(255,255,255,0.9);
     margin-top: 10px;

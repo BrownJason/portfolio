@@ -12,7 +12,7 @@ const Outer = styled.div`
   background: url(../../images/background.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  ${media.between('small', 'medium')`
+  ${media.lessThan('small')`
     flex-direction: column;
     padding-top: 2em;
     height: 100%;
@@ -29,7 +29,7 @@ const Works = styled.div`
   display: flex;
   padding: 1em;
   padding-top: 4em;
-  ${media.between('small', 'medium')`
+  ${media.lessThan('small')`
     flex-direction: column;
     padding: 2.5em;
     height: 100%;

@@ -24,7 +24,7 @@ const Headshot = styled.img`
   background-size: 100%;
   width: 100%;
   height: 100%;
-  ${media.between('small', 'medium')`
+  ${media.lessThan('small')`
         flex-direction: column;
         background-image: url(${headshot});
         background-repeat: repeat;
