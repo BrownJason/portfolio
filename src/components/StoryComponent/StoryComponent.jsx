@@ -10,9 +10,11 @@ const InnerStore = styled.div`
   padding: 1em;
   background: white;
   border-radius: 15px;
+  height: 100%;
+  width: 100%;
   ${media.lessThan('small')`
     padding: 0;
-    margin-left: -5px;
+    margin-left: -15px;
     height: 100%;
     width: 100%;
   `}
