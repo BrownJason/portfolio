@@ -24,7 +24,7 @@ const List = styled.li`
   margin-left: -50px;
   ${media.lessThan('medium')`
     font-size: 14pt;
-    margin-left: -300px;
+    margin-left: -250px;
   `}
 `;
 
