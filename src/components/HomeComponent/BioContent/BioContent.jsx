@@ -17,7 +17,7 @@ const Outer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 175px;
     width: 100%;
   `}
 `;
