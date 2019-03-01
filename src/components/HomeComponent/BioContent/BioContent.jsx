@@ -15,6 +15,7 @@ const Outer = styled.div`
   ${media.lessThan('small')`
     flex-direction: column;
     height: 100%;
+    width: 100%;
   `}
 `;
 
