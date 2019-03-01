@@ -12,7 +12,7 @@ const Link = styled(NavLink)`
   ${media.lessThan('small')`
     justify-content: flex-start;
     margin: auto;
-    padding-left: 0;
+    maring-left: -10px;
   `}
 `;
 
