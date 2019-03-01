@@ -17,6 +17,7 @@ const Outer = styled.div`
     margin-bottom: 50px;
     margin-left: -15px;
     text-decoration: none;
+    width: 100%;
   `}
 `;
 
@@ -54,7 +55,7 @@ const Modules = props => {
             &nbsp;&nbsp;
             {props.headerText}
           </Header>
-          <Image src={require(`../../../images/${props.img}.PNG`)} alt="" />
+          <Image src={require(`../../../images/${props.img}.PNG`)} alt='' />
           <Paragraph>
             {props.pBefore}
             <br />
