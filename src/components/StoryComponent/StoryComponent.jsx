@@ -25,7 +25,7 @@ const BackgroundImg = styled.div`
   padding: 4em;
   height: 100vh;
   width: 100%;
-  ${media.lessThan('medium')`
+  ${media.between('small', 'medium')`
     height: 100%;
     width: 100%;
   `}
