@@ -32,7 +32,7 @@ const NavBar = styled.nav`
 const UList = styled.ul`
   display: inline-flex;
   margin-top: 10px;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     justify-content: flex-start;
     margin: auto;
   `}

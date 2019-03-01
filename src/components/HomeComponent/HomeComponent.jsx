@@ -11,12 +11,24 @@ const Outer = styled.div`
   display: flex;
   justify-content: center;
   padding: 50px 0 0;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     text-align: center;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding: 50px 0 0;
+    padding: 0;
+  `}
+`;
+
+const OuterContent = styled.div`
+  height: 100%;
+  width: 100%;
+  ${media.lessThan('medium')`
+  display: flex;
+   text-align: center;
+   flex-direction: column;
+    height: 100%;
+    width: 100%;
   `}
 `;
 
@@ -25,7 +37,7 @@ const AboutMe = styled.div`
   height: 100px;
   display: flex;
   justify-content: center;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -38,13 +50,13 @@ const AboutMe = styled.div`
 
 const Header = styled.h2`
   display: flex;
-  text-shadow: 5px 0 5px black;
+  text-shadow: 5px 0 5px  black;
   font-size: 85px;
   display: flex;
   margin: 0;
   justify-content: center;
   color: white;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -62,10 +74,12 @@ class HomeComponent extends Component {
   render () {
     return (
       <Outer>
-        <AboutMe>
-          <Header>Jason Brown</Header>
-        </AboutMe>
-        <BioContent />
+        <OuterContent>
+          <AboutMe>
+            <Header>Jason Brown</Header>
+          </AboutMe>
+          <BioContent />
+        </OuterContent>
       </Outer>
     );
   }

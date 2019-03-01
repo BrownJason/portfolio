@@ -11,7 +11,7 @@ const Outer = styled.div`
   text-decoration: none;
   justify-content: center;
   width: 32em;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     height: 100%;
     padding: 10px;
     margin-bottom: 50px;
@@ -35,7 +35,7 @@ const Paragraph = styled.p`
 
 const Image = styled.img`
   width: 100%;
-  ${media.lessThan('small')`
+  ${media.lessThan('medium')`
     width: 100%;
   `}
 `;
