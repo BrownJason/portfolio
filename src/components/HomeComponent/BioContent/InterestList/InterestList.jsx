@@ -24,7 +24,7 @@ const List = styled.li`
   margin-left: -50px;
   ${media.lessThan('medium')`
     font-size: 14pt;
-    margin-left: -325px;
+    margin-left: -300px;
   `}
 `;
 
@@ -54,24 +54,24 @@ class InterestList extends React.Component {
       <LinkedList>
         <UL>
           <List>
-            <Links as='a' href="https://steamcommunity.com/profiles/76561198112819248/">
+            <Links as='a' href='https://steamcommunity.com/profiles/76561198112819248/'>
               Video Games{' '}
               <i className={`fa fa-gamepad `} />
             </Links>
           </List>
           <Right>
-            <Links href="https://www.facebook.com/groups/311739072291023/">
+            <Links href='https://www.facebook.com/groups/311739072291023/'>
               Golf <i className={`fas fa-golf-ball`} />
             </Links>
           </Right>
           <List>
-            <Links href="https://www.facebook.com/groups/BrownFamilyLeague/">
+            <Links href='https://www.facebook.com/groups/BrownFamilyLeague/'>
               Bowling{' '}
               <i className={`fas fa-bowling-ball`} />
             </Links>
           </List>
           <Right>
-            <Links href="https://github.com/BrownJason">
+            <Links href='https://github.com/BrownJason'>
               Aspiring Developer{' '}
               <i className={`fas fa-server`} />
             </Links>
