@@ -33,16 +33,52 @@ const OuterDiv = styled.div`
   `}
 `;
 
+const AboutMe = styled.div`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  ${media.lessThan('medium')`
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  `}
+`;
+
+const Header = styled.h2`
+  display: flex;
+  text-shadow: 5px 0 5px black;
+  font-size: 85px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  ${media.lessThan('medium')`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-shadow: 5px 0 5px  black;
+    font-size: 55px;
+    height: 100%;
+    width: 100%;
+  `}
+`;
+
 class BioContent extends React.Component {
   render () {
     return (
-      <Outer>
-        <InterestList />
-        <OuterDiv>
-          <HeadShot />
-        </OuterDiv>
-        <Biography />
-      </Outer>
+      <div>
+        <AboutMe>
+          <Header>Jason Brown</Header>
+        </AboutMe>
+        <Outer>
+          <InterestList />
+          <OuterDiv>
+            <HeadShot />
+          </OuterDiv>
+          <Biography />
+        </Outer>
+      </div>
     );
   }
 }
