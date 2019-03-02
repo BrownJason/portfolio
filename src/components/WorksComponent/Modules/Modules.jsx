@@ -54,7 +54,7 @@ const Modules = props => {
             &nbsp;&nbsp;
             {props.headerText}
           </Header>
-          <Image src={require(`../../../images/${props.img}.PNG`)} alt='' />
+          <Image src={`${props.img}`} alt='' />
           <Paragraph>
             {props.pBefore}
             <br />

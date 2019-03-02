@@ -6,6 +6,15 @@ const LinkedList = styled.div`
   margin-top: 50px;
   width: 500px;
   flex-direction: column;
+  ${media.between('medium', 'large')`
+    flex-direction: column;
+    margin-top: 125px;
+    margin-bottom: 10px;
+    margin-right: -50px;
+    margin-left: 20px;
+    height: 100%;
+    width: 100%;
+  `}
   ${media.lessThan('medium')`
   flex-direction: column;
     margin-top: 0px;

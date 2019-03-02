@@ -12,22 +12,15 @@ const slide = keyframes`
   `}
 `;
 
-const InvisibleSquare = styled.div` 
+const InvisibleSquare = styled.p` 
   width: 35px;
   height: 18px;
   margin-top: -10px;
   background: transparent;
   border: 4px solid black;
   border-radius: 4px;
-  animation: ${slide} 10s linear infinite;
-`;
-
-const Window = styled.div`
-  width: 10px;
-  height: 7px;
-  background-color: white;
-  border-radius: 7px;
-  animation: ${slide} 10s linear infinite;
+  animation: ${slide} 15s linear infinite;
+  text-color: blue;
 `;
 
 const Ball = styled.div`
@@ -37,7 +30,7 @@ const Ball = styled.div`
   margin-left: -5px;
   margin-right: -5px;
   background-color: #FF5722;
-  animation: ${slide} 10s linear infinite;
+  animation: ${slide} 15s linear infinite;
 `;
 
 const Ul = styled.ul`
@@ -68,8 +61,7 @@ class FooterComponent extends React.Component {
         <Ul>
           <li>© 2018 Copyright Jason Brown</li>
           <Ball />
-          <InvisibleSquare>
-            <Window />
+          <InvisibleSquare>Jason
           </InvisibleSquare>
           <Ball />
         </Ul>
