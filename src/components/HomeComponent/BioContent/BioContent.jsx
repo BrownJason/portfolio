@@ -5,6 +5,11 @@ import Biography from './BiographyComponent/Biography';
 import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 
+const rotate = keyframes`
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(-360deg); }
+`;
+
 class BioContent extends React.Component {
   render () {
     const Background = styled.div`
@@ -64,11 +69,6 @@ class BioContent extends React.Component {
         height: 100%;
         width: 100%;
       `}
-    `;
-
-    const rotate = keyframes`
-      from { transform: rotateX(0deg); }
-      to { transform: rotateX(-360deg); }
     `;
 
     const Header = styled.h2`
