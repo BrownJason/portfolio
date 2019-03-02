@@ -17,7 +17,7 @@ const Outer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: 175px;
+    margin-top: 50px;
     width: 100%;
   `}
   ${media.lessThan('medium')`
@@ -25,7 +25,7 @@ const Outer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: 175px;
+    margin-top: 50px;
     width: 100%;
   `}
 `;
