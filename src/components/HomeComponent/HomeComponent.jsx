@@ -8,21 +8,18 @@ import bkgImage from '../../images/background.jpg';
 class HomeComponent extends Component {
   render () {
     const Outer = styled.div`
-      height: 90%;
+      height: 100vh;
       width: 100%;
       display: inline-flex;
       padding-bottom: -60px;
       padding-top: 50px;
       background-image: url(${bkgImage});
-      z-index: 1002; 
+      background-size: cover;
       ${media.between('medium', 'large')`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-image: url(${bkgImage});
-        background-size: cover;
-        margin: auto;
-        height: 100%;
+        height: 100vh;
         width: 100%;
       `}
       ${media.lessThan('medium')`
@@ -33,7 +30,7 @@ class HomeComponent extends Component {
     `;
 
     const OuterContent = styled.div`
-      height: 75%;
+      height: 100%;
       width: 100%;
     `;
 

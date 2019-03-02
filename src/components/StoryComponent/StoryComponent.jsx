@@ -9,22 +9,26 @@ class StoryComponent extends Component {
   render () {
     const InnerStore = styled.div`
       padding: 1em;
-      background: white;
+      background: lightgrey;
       border-radius: 15px;
       width: 100%;
+      hieght: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       ${media.between('medium', 'large')`
       display: flex;
       flex-direction: column;
       padding: 1em;
       margin-left: -15px;
-      height: 100vh;
+      height: 100%;
       width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
     `}
       ${media.lessThan('medium')`
       padding: 1em;
       margin-left: -15px;
       height: 100%;
       width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
     `}
     `;
     const BackgroundImg = styled.div`

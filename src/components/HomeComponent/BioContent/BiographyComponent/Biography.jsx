@@ -63,7 +63,7 @@ class Biography extends React.Component {
             gained interest in coding through playing videos at his grandparents
             place on the weekends with his cousins. While in college, pursuing
             an Computer Science degree, he self-studied programming languages to
-            help purse creating video games. Jason enrolled in the FastTrack’D
+            help pursue creating video games. Jason enrolled in the FastTrack’D
             program to jumpstart his career in this ever exciting and expanding
             field. In his free time, he enjoys gaming with friends,
             contemplating how game logic is coded, bowling and golfing with

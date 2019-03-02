@@ -21,18 +21,13 @@ import modules3 from './WorksText/modules3.json';
 import modules4 from './WorksText/modules4.json';
 
 import detroit from './images/detroit.jpg';
-import detroit2 from './images/detroit2.jpg'
-import background from './images/background.jpg'
-
-import javaScript from './images/javaScriptSnip.PNG';
-import java from './images/javaSnip.PNG';
-import reactSnip from './images/networkingSnip.PNG';
-import spring from './images/springSnip.PNG';
+import detroit2 from './images/detroit2.jpg';
+import background from './images/background.jpg';
 
 import pathOfExile from './images/pathOfExile.jpg';
 
 class App extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       questions: [
@@ -45,40 +40,31 @@ class App extends React.Component {
         questions7
       ],
       modules: [modules1, modules2, modules3, modules4],
-      worksImages: [javaScript, java, reactSnip, spring],
       pOE: pathOfExile,
       backgroundIndex: 1,
       length: 1,
       index: 0
-      
     };
     this.imgs = [detroit, detroit2, background];
     this.changeBackground = this.changeBackground.bind(this);
   }
 
-  componentDidMount () {
-    this.timeout = setTimeout(
-      this.changeBackground,
-      this.state.length * 2000
-    );
-    this.state.worksImages.forEach(src => {
-      const images = document.createElement('img');
-      images.src = src;
-    });
+  componentDidMount() {
+    this.timeout = setTimeout(this.changeBackground, this.state.length * 2000);
   }
- 
-  componentWillUnmount () {
+
+  componentWillUnmount() {
     if (this.timeout) clearTimeout(this.timeout);
   }
 
-  changeBackground () {
+  changeBackground() {
     this.setState(
-      function ({ backgroundIndex }) {
+      function({ backgroundIndex }) {
         const nextBackgroundIndex = ++backgroundIndex % this.state.length;
 
         return { backgroundIndex: nextBackgroundIndex };
       },
-      function () {
+      function() {
         this.timeout = setTimeout(
           this.changeBackground,
           this.state.length * 2000
@@ -87,29 +73,39 @@ class App extends React.Component {
     );
   }
 
-  render () {
-    const workImage = this.state.worksImages[this.state.index];
+  render() {
     const image = this.state.pOE;
     return (
       <div className="App" id="home">
         <NavComponent />
-        <Route exact path={'/'} component={HomeComponent} />
-        <Route
-          exact
-          path={'/Story'}
-          render={() => (
-            <StoryComponent
-              questions={this.state.questions}
-              imgs={this.imgs[this.state.backgroundIndex]}
-            />
-          )}
-        />
-        <Route
-          exact
-          path={'/Works'}
-          render={() => <WorksComponent modules={this.state.modules} images={workImage} />}
-        />
-        <Route exact path={'/Interests'} render={() => <InterestComponent image={image} />} />
+        <div>
+          <Route exact path={'/'} component={HomeComponent} />
+          <Route
+            exact
+            path={'/Story'}
+            render={() => (
+              <StoryComponent
+                questions={this.state.questions}
+                imgs={this.imgs[this.state.backgroundIndex]}
+              />
+            )}
+          />
+          <Route
+            exact
+            path={'/Works'}
+            render={() => (
+              <WorksComponent
+                modules={this.state.modules}
+                img={this.imgs[this.state.backgroundIndex]}
+              />
+            )}
+          />
+          <Route
+            exact
+            path={'/Interests'}
+            render={() => <InterestComponent image={image} />}
+          />
+        </div>
         <FooterComponent />
       </div>
     );
