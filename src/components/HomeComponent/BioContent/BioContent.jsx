@@ -12,6 +12,14 @@ const Outer = styled.div`
   margin-right: 40px;
   display: flex;
   justify-content: space-between;
+  ${media.between('medium', 'large')`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 175px;
+    width: 100%;
+  `}
   ${media.lessThan('medium')`
     display: flex;
     flex-direction: column;
