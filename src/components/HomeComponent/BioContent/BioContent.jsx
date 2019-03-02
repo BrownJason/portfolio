@@ -2,7 +2,7 @@ import React from 'react';
 import InterestList from './InterestList/InterestList';
 import HeadShot from './HeadShot/HeadShot';
 import Biography from './BiographyComponent/Biography';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 
 const Outer = styled.div`
@@ -46,6 +46,11 @@ const AboutMe = styled.div`
   `}
 `;
 
+const rotate = keyframes`
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(-360deg); }
+`;
+
 const Header = styled.h2`
   display: flex;
   text-shadow: 5px 0 5px black;
@@ -53,6 +58,9 @@ const Header = styled.h2`
   display: flex;
   justify-content: center;
   color: white;
+  &:hover {
+    animation: ${rotate} infinite 1s linear;
+  }
   ${media.lessThan('medium')`
     display: flex;
     flex-direction: column;
