@@ -37,12 +37,13 @@ const background = TargetComponent => (strs, ...exprs) =>
   };
 
 const Outer = background('div')`
-  height: 100%;
+  height: 90%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 50px 0 0;
+  display: inline-flex;
+  padding-bottom: -60px;
+  padding-top: 50px;
   background-image: url(${bkgImage});
+  z-index: 1002;
   ${media.lessThan('medium')`
     text-align: center;
     height: 100%;
@@ -51,9 +52,8 @@ const Outer = background('div')`
 `;
 
 const OuterContent = styled.div`
-  height: 100%;
+  height: 75%;
   width: 100%;
-  padding: 1em;
 `;
 
 class HomeComponent extends Component {

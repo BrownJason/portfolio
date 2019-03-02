@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import InterestList from './InterestList/InterestList';
 import HeadShot from './HeadShot/HeadShot';
 import Biography from './BiographyComponent/Biography';
 import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
+
+const Background = styled.div`
+  margin: auto;
+`;
 
 const Outer = styled.div`
   height: 80vh;
@@ -17,7 +21,7 @@ const Outer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 25px;
     width: 100%;
   `}
   ${media.lessThan('medium')`
@@ -25,7 +29,7 @@ const Outer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 175px;
     width: 100%;
   `}
 `;
@@ -46,6 +50,12 @@ const AboutMe = styled.div`
   height: 100px;
   display: flex;
   justify-content: center;
+  ${media.between('medium', 'large')`
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  `}
   ${media.lessThan('medium')`
     flex-direction: column;
     justify-content: center;
@@ -69,6 +79,14 @@ const Header = styled.h2`
   &:hover {
     animation: ${rotate} infinite 1s linear;
   }
+  ${media.between('medium', 'large')`
+    flex-direction: column;
+    font-size: 85px;
+    text-align: center;
+    text-shadow: 5px 0 5px  black;
+    height: 100%;
+    width: 100%;
+  `}
   ${media.lessThan('medium')`
     display: flex;
     flex-direction: column;
@@ -83,18 +101,18 @@ const Header = styled.h2`
 class BioContent extends React.Component {
   render () {
     return (
-      <div>
+      <Background>
+        <AboutMe>
+          <Header>Jason Brown</Header>
+        </AboutMe>
         <Outer>
-          <AboutMe>
-            <Header>Jason Brown</Header>
-          </AboutMe>
           <InterestList />
           <OuterDiv>
             <HeadShot />
           </OuterDiv>
           <Biography />
         </Outer>
-      </div>
+      </Background>
     );
   }
 }

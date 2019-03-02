@@ -13,9 +13,9 @@ const BioRight = styled.div`
   margin: 10px;
   width: 500px;
   height: 300px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   ${media.lessThan('medium')`
     flex-direction: column;
@@ -39,15 +39,15 @@ const Bio = styled.div`
 
 const Header = styled.h2`
   color: black;
-`
+`;
 
-const Span = styled.span``
+const Span = styled.span``;
 
 class Biography extends React.Component {
   render () {
     return (
-      <BioRight>
-        <div>
+      <div>
+        <BioRight>
           <a href={pdf} target="_blank">
             <Bio>
               <Header>
@@ -57,20 +57,20 @@ class Biography extends React.Component {
             </Bio>
           </a>
           <Paragraph>
-            Jason Brown was raised in Wayne, MI, a suburb of Detroit. He was
-            an avid gamer and reader from a young age; where he would pursue
-            the creative side of video games, reading, and learning to draw.
-            He gained interest in coding through playing videos at his
-            grandparents place on the weekends with his cousins. While in
-            college, pursuing an Computer Science degree, he self-studied
-            programming languages to help purse creating video games. Jason
-            enrolled in the FastTrack’D program to jumpstart his career in
-            this ever exciting and expanding field. In his free time, he
-            enjoys gaming with friends, contemplating how game logic is coded,
-            bowling and golfing with family, and donating to charity.
+            Jason Brown was raised in Wayne, MI, a suburb of Detroit. He was an
+            avid gamer and reader from a young age; where he would pursue the
+            creative side of video games, reading, and learning to draw. He
+            gained interest in coding through playing videos at his grandparents
+            place on the weekends with his cousins. While in college, pursuing
+            an Computer Science degree, he self-studied programming languages to
+            help purse creating video games. Jason enrolled in the FastTrack’D
+            program to jumpstart his career in this ever exciting and expanding
+            field. In his free time, he enjoys gaming with friends,
+            contemplating how game logic is coded, bowling and golfing with
+            family, and donating to charity.
           </Paragraph>
-        </div>
-      </BioRight>
+        </BioRight>
+      </div>
     );
   }
 }

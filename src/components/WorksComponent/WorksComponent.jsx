@@ -42,7 +42,7 @@ class WorksComponent extends React.Component {
               pBefore={modules.pBeforeBr}
               pAfter={modules.pAfterBr}
               link={modules.link}
-              img={modules.img}
+              img={this.props.images}
             >
               {modules.h3}
             </Modules>

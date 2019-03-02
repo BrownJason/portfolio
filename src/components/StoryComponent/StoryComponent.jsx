@@ -4,8 +4,6 @@ import media from 'styled-media-query';
 
 import Questions from './Questions/Questions';
 
-import currentImg from '../../images/detroit.jpg';
-
 const InnerStore = styled.div`
   padding: 1em;
   background: white;
@@ -22,7 +20,7 @@ const InnerStore = styled.div`
 
 const BackgroundImg = styled.div`
   display: flex;
-  background-image: url(${currentImg});
+  background-image: ${props => (props.imgs ? 'orange' : 'black')};
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4em;
@@ -40,7 +38,6 @@ class StoryComponent extends Component {
       <BackgroundImg>
         <InnerStore>
           <ul>
-            {console.log(this.props.questions)}
             {this.props.questions.map(question => (
               <Questions
                 key={question.h3}
