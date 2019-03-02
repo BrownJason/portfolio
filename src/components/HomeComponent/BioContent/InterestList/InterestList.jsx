@@ -24,7 +24,10 @@ const List = styled.li`
   margin-left: -50px;
   ${media.lessThan('medium')`
     font-size: 14pt;
-    margin-left: -250px;
+    margin-left: -20px;
+    padding-bottom: 5px;
+    text-decoration: none !important;
+    list-style: none !important;
   `}
 `;
 
@@ -38,6 +41,9 @@ const Right = styled.li`
   ${media.lessThan('medium')`
     font-size: 14pt;
     margin-right: 15px;
+    padding-bottom: 5px;
+    text-decoration: none !important;
+    list-style: none !important;
   `}
 `;
 
