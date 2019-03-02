@@ -84,10 +84,10 @@ class BioContent extends React.Component {
   render () {
     return (
       <div>
-        <AboutMe>
-          <Header>Jason Brown</Header>
-        </AboutMe>
         <Outer>
+          <AboutMe>
+            <Header>Jason Brown</Header>
+          </AboutMe>
           <InterestList />
           <OuterDiv>
             <HeadShot />
