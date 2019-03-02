@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 
 class InterestComponent extends Component {
@@ -13,29 +13,40 @@ class InterestComponent extends Component {
     `;
 
     const InnerContaitner = styled.div`
-      display: flex;
-      flex-direction: column;
-      z-index: 2;
       background-image: url(${this.props.image});
       background-size: cover;
       margin: auto;
       height: 100%;
       width: 100%;
       ${media.lessThan('medium')`
-        flex-direction: column;
-        justify-content: center;
-        background-repeat: repeat;
+        background-image: url(${this.props.image});
+        background-repeat: repeat-y;
         margin: auto;
-        height: 100%;
+        margin-top: 50px;
+        margin-bottom: -50px;
+        height: 30%;
+        width: 100%;
+      `}
+    `;
+
+    const AnotherImg = styled.div`
+    ${media.lessThan('medium')`
+        background-image: url(${this.props.image});
+        background-size: cover;
+        background-repeat: repeat-y;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: -50px;
+        height: 30%;
         width: 100%;
       `}
     `;
     return (
       <Container>
         <a href='http://www.pathofexile.com/account/view-profile/Zijesinop'>
-          <InnerContaitner>
-
-          </InnerContaitner>
+          <InnerContaitner />
+          <AnotherImg />
+          <AnotherImg />
         </a>
       </Container>
     );

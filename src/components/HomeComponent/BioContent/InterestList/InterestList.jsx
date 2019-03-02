@@ -20,37 +20,38 @@ const LinkedList = styled.div`
     margin-top: 0px;
     margin-bottom: 10px;
     margin-right: 10px;
-    margin-right: -125px;
     height: 100%;
     width: 100%;
   `}
 `;
 
-const List = styled.li`
+const List = styled.div`
   font-size: 28pt;
   padding-bottom: 5px;
   text-decoration: none !important;
   list-style: none !important;
-  margin-left: -50px;
+  maring-left: 100px;
+  text-align: left;
   ${media.lessThan('medium')`
     font-size: 14pt;
-    margin-left: -20px;
+    maring-left: 100px;
     padding-bottom: 5px;
     text-decoration: none !important;
     list-style: none !important;
   `}
 `;
 
-const Right = styled.li`
+const Right = styled.div`
   font-size: 28pt;
   padding-bottom: 5px;
   float: right;
-  margin-right: 15px;
+  margin-right: -55px;
   text-decoration: none !important;
   list-style: none !important;
+  text-align: right;
   ${media.lessThan('medium')`
     font-size: 14pt;
-    margin-right: 15px;
+    margin-right: 50px;
     padding-bottom: 5px;
     text-decoration: none !important;
     list-style: none !important;
@@ -70,23 +71,21 @@ class InterestList extends React.Component {
       <LinkedList>
         <UL>
           <List>
-            <Links as='a' href='https://steamcommunity.com/profiles/76561198112819248/'>
+            <Links href='https://steamcommunity.com/profiles/76561198112819248/'>
               Video Games{' '}
-              <i className={`fa fa-gamepad `} />
+              <i className={`fa fa-gamepad `} />{' '}
             </Links>
-          </List>
-          <Right>
-            <Links href='https://www.facebook.com/groups/311739072291023/'>
-              Golf <i className={`fas fa-golf-ball`} />
-            </Links>
-          </Right>
-          <List>
+            <div />
             <Links href='https://www.facebook.com/groups/BrownFamilyLeague/'>
               Bowling{' '}
               <i className={`fas fa-bowling-ball`} />
             </Links>
           </List>
           <Right>
+            <Links href='https://www.facebook.com/groups/311739072291023/'>
+              Golf <i className={`fas fa-golf-ball`} />{' '}
+            </Links>
+            <div />
             <Links href='https://github.com/BrownJason'>
               Aspiring Developer{' '}
               <i className={`fas fa-server`} />

@@ -13,12 +13,14 @@ class Modules extends React.Component {
       text-decoration: none;
       justify-content: center;
       width: 32em;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       ${media.lessThan('medium')`
     height: 100%;
     padding: 10px;
     margin-bottom: 50px;
     text-decoration: none;
     width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
   `}
     `;
 
@@ -54,7 +56,7 @@ class Modules extends React.Component {
               &nbsp;&nbsp;
               {this.props.headerText}
             </Header>
-            <Image src={`${this.props.img}`} alt="" />
+            <Image src={require(`../../../images/${this.props.img}.PNG`)} alt="" />
             <Paragraph>
               {this.props.pBefore}
               <br />

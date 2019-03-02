@@ -6,11 +6,13 @@ import Modules from './Modules/Modules';
 class WorksComponent extends React.Component {
   render () {
     const Outer = styled.div`
-      height: 100%;
+      height: 100vh;
       width: 100%;
       display: flex;
       justify-content: center;
       padding-top: 3em;
+      background-image: url(${this.props.img});
+      background-size: cover;
       ${media.lessThan('medium')`
       flex-direction: column;
       padding-top: 2em;
@@ -23,10 +25,11 @@ class WorksComponent extends React.Component {
       display: flex;
       padding: 1em;
       padding-top: 4em;
+      height: 80%;
       ${media.lessThan('medium')`
       flex-direction: column;
       padding-top: 4em;
-      height: 100%;
+      height: 80%;
       width: 80%;
     `}
     `;
@@ -41,7 +44,7 @@ class WorksComponent extends React.Component {
               pBefore={modules.pBeforeBr}
               pAfter={modules.pAfterBr}
               link={modules.link}
-              img={this.props.images}
+              img={modules.img}
             />
           ))}
         </Works>

@@ -9,6 +9,9 @@ class Questions extends React.Component {
 
     const Header = styled.h3`
       color: black;
+      font-size: 24px;
+      font-style: italic;
+      margin-left: -25px;
     `;
 
     const Links = styled.a`
@@ -17,6 +20,8 @@ class Questions extends React.Component {
 
     const List = styled.li`
       width: 100%;
+      text-decoration: none !important;
+      list-style: none !important;
     `;
 
     const Divider = styled.div`
