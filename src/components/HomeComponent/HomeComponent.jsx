@@ -43,7 +43,17 @@ const Outer = background('div')`
   padding-bottom: -60px;
   padding-top: 50px;
   background-image: url(${bkgImage});
-  z-index: 1002;
+  z-index: 1002; 
+  ${media.between('medium', 'large')`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(${bkgImage});
+    background-size: cover;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+  `}
   ${media.lessThan('medium')`
     text-align: center;
     height: 100%;
