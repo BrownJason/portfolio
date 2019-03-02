@@ -43,7 +43,8 @@ class App extends React.Component {
       modules: [modules1, modules2, modules3, modules4],
       imgs: [detroit],
       worksImages: [javaScript, java, reactSnip, spring],
-      activeImageIndex: 0
+      activeImageIndex: 0,
+      index: 0
     };
   }
 
@@ -61,6 +62,7 @@ class App extends React.Component {
 
   render () {
     const activeBackground = this.state.imgs[this.state.activeImageIndex];
+    const workImage = this.state.worksImages[this.state.index];
     return (
       <div className="App" id="home">
         <NavComponent />
@@ -78,7 +80,7 @@ class App extends React.Component {
         <Route
           exact
           path={'/Works'}
-          render={() => <WorksComponent modules={this.state.modules} images={this.state.worksImages} />}
+          render={() => <WorksComponent modules={this.state.modules} images={workImage} />}
         />
         <Route exact path={'/Interests'} component={InterestComponent} />
         <FooterComponent />

@@ -4,36 +4,50 @@ import media from 'styled-media-query';
 
 import Questions from './Questions/Questions';
 
-const InnerStore = styled.div`
-  padding: 1em;
-  background: white;
-  border-radius: 15px;
-  height: 100%;
-  width: 100%;
-  ${media.lessThan('medium')`
-    padding: 1em;
-    margin-left: -15px;
-    height: 100%;
-    width: 100%;
-  `}
-`;
-
-const BackgroundImg = styled.div`
-  display: flex;
-  background-image: ${props => (props.imgs ? 'orange' : 'black')};
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 4em;
-  height: 100vh;
-  width: 100%;
-  ${media.lessThan('medium')`
-    height: 100%;
-    width: 100%;
-  `}
-`;
 
 class StoryComponent extends Component {
   render () {
+    const InnerStore = styled.div`
+      padding: 1em;
+      background: white;
+      border-radius: 15px;
+      width: 100%;
+      ${media.between('medium', 'large')`
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+      margin-left: -15px;
+      height: 100vh;
+      width: 100%;
+    `}
+      ${media.lessThan('medium')`
+      padding: 1em;
+      margin-left: -15px;
+      height: 100%;
+      width: 100%;
+    `}
+  `;
+  const BackgroundImg = styled.div`
+    display: flex;
+    background-image: url(${this.props.imgs});
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4em;
+    height: 100vh;
+    width: 100%; 
+    ${media.between('medium', 'large')`
+      display: flex;
+      flex-direction: column;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+    `}
+    ${media.lessThan('medium')`
+    height: 100%;
+    width: 100%;
+  `}
+  `;
+
     return (
       <BackgroundImg>
         <InnerStore>
