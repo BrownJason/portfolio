@@ -21,6 +21,14 @@ class InterestComponent extends Component {
       margin: auto;
       height: 100%;
       width: 100%;
+      ${media.lessThan('medium')`
+        flex-direction: column;
+        justify-content: center;
+        background-repeat: repeat;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+      `}
     `;
     return (
       <Container>
