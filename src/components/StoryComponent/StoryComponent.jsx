@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 
 import Questions from './Questions/Questions';
 
-
 class StoryComponent extends Component {
+
   render () {
     const InnerStore = styled.div`
       padding: 1em;
@@ -26,28 +26,28 @@ class StoryComponent extends Component {
       height: 100%;
       width: 100%;
     `}
-  `;
-  const BackgroundImg = styled.div`
-    display: flex;
-    background-image: url(${this.props.imgs});
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 4em;
-    height: 100vh;
-    width: 100%; 
-    ${media.between('medium', 'large')`
+    `;
+    const BackgroundImg = styled.div`
+      display: flex;
+      background-image: url(${this.props.imgs});
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 4em;
+      height: 100vh;
+      width: 100%;
+      animation: ease-in infinite linear;
+      ${media.between('medium', 'large')`
       display: flex;
       flex-direction: column;
       background-size: cover;
       height: 100vh;
       width: 100%;
     `}
-    ${media.lessThan('medium')`
+      ${media.lessThan('medium')`
     height: 100%;
     width: 100%;
   `}
-  `;
-
+    `;
     return (
       <BackgroundImg>
         <InnerStore>

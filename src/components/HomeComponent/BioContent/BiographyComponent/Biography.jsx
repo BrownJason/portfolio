@@ -4,47 +4,47 @@ import media from 'styled-media-query';
 
 import pdf from '../../../../documents/bio.docx';
 
-const Paragraph = styled.p`
-  width: 100%;
-`;
-
-const BioRight = styled.div`
-  float: right;
-  margin: 10px;
-  width: 500px;
-  height: 300px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  ${media.lessThan('medium')`
-    flex-direction: column;
-    background: rgba(255,255,255,0.9);
-    margin-top: 10px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 60px;
-    padding: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-  `}
-`;
-
-const Bio = styled.div`
-  position: relative;
-  display: inline-block;
-`;
-
-const Header = styled.h2`
-  color: black;
-`;
-
-const Span = styled.span``;
-
 class Biography extends React.Component {
   render () {
+    const Paragraph = styled.p`
+      width: 100%;
+    `;
+
+    const BioRight = styled.div`
+      float: right;
+      margin: 10px;
+      width: 500px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6),
+        0 6px 20px 0 rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      ${media.lessThan('medium')`
+        flex-direction: column;
+        background: rgba(255,255,255,0.9);
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 60px;
+        padding: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+      `}
+    `;
+
+    const Bio = styled.div`
+      position: relative;
+      display: inline-block;
+    `;
+
+    const Header = styled.h2`
+      color: black;
+    `;
+
+    const Span = styled.span``;
     return (
       <div>
         <BioRight>
