@@ -3,7 +3,10 @@ import BioContent from './BioContent/BioContent';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-import bkgImage from '../../images/background.jpg';
+const OuterContent = styled.div`
+height: 100%;
+width: 100%;
+`;
 
 class HomeComponent extends Component {
   render () {
@@ -13,7 +16,7 @@ class HomeComponent extends Component {
       display: inline-flex;
       padding-bottom: -60px;
       padding-top: 50px;
-      background-image: url(${bkgImage});
+      background-image: url(${this.props.imgs});
       background-size: cover;
       ${media.between('medium', 'large')`
         display: flex;
@@ -28,12 +31,7 @@ class HomeComponent extends Component {
         width: 100%;
       `}
     `;
-
-    const OuterContent = styled.div`
-      height: 100%;
-      width: 100%;
-    `;
-
+  
     return (
       <Outer>
         <OuterContent>

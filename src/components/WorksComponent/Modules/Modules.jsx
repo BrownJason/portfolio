@@ -15,13 +15,13 @@ class Modules extends React.Component {
       width: 32em;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       ${media.lessThan('medium')`
-    height: 100%;
-    padding: 10px;
-    margin-bottom: 50px;
-    text-decoration: none;
-    width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
-  `}
+        height: 100%;
+        padding: 10px;
+        margin-bottom: 50px;
+        text-decoration: none;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+      `}
     `;
 
     const Link = styled.a`
@@ -40,8 +40,8 @@ class Modules extends React.Component {
     const Image = styled.img`
       width: 100%;
       ${media.lessThan('medium')`
-    width: 100%;
-  `}
+        width: 100%;
+      `}
     `;
 
     const Header = styled.h4`
