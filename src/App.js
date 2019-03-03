@@ -42,7 +42,7 @@ class App extends React.Component {
       modules: [modules1, modules2, modules3, modules4],
       pOE: pathOfExile,
       backgroundIndex: 1,
-      length: 1,
+      length: 3,
       index: 0
     };
     this.imgs = [detroit, detroit2, background];
@@ -57,14 +57,14 @@ class App extends React.Component {
     if (this.timeout) clearTimeout(this.timeout);
   }
 
-  changeBackground() {
+  changeBackground () {
     this.setState(
-      function({ backgroundIndex }) {
-        const nextBackgroundIndex = ++backgroundIndex % this.state.length;
+      function ({ backgroundIndex }) {
+        const nextBackgroundIndex = ++backgroundIndex % this.imgs.length;
 
         return { backgroundIndex: nextBackgroundIndex };
       },
-      function() {
+      function( ) {
         this.timeout = setTimeout(
           this.changeBackground,
           this.state.length * 2000
@@ -73,22 +73,23 @@ class App extends React.Component {
     );
   }
 
-  render() {
+  render () {
     const image = this.state.pOE;
     return (
       <div className="App" id="home">
         <NavComponent />
         <div>
-          <Route exact path={'/'} component={HomeComponent} />
+          <Route
+            exact
+            path={'/'}
+            render={() => (
+              <HomeComponent imgs={this.imgs[this.state.backgroundIndex]} />
+            )}
+          />
           <Route
             exact
             path={'/Story'}
-            render={() => (
-              <StoryComponent
-                questions={this.state.questions}
-                imgs={this.imgs[this.state.backgroundIndex]}
-              />
-            )}
+            render={() => <StoryComponent questions={this.state.questions} imgs={this.imgs[this.state.backgroundIndex]}/>}
           />
           <Route
             exact

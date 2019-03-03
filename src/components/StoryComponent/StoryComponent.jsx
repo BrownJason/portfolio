@@ -12,45 +12,43 @@ class StoryComponent extends Component {
       background: lightgrey;
       border-radius: 15px;
       width: 100%;
-      hieght: 80%;
+      margin: auto;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       ${media.between('medium', 'large')`
-      display: flex;
-      flex-direction: column;
-      padding: 1em;
-      margin-left: -15px;
-      height: 100%;
-      width: 100%;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
-    `}
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+      `}
       ${media.lessThan('medium')`
-      padding: 1em;
-      margin-left: -15px;
-      height: 100%;
-      width: 100%;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
-    `}
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+      `}
     `;
     const BackgroundImg = styled.div`
       display: flex;
       background-image: url(${this.props.imgs});
       background-repeat: no-repeat;
       background-size: cover;
-      padding: 4em;
+      padding: 7em;
       height: 100vh;
       width: 100%;
       animation: ease-in infinite linear;
       ${media.between('medium', 'large')`
-      display: flex;
-      flex-direction: column;
-      background-size: cover;
-      height: 100vh;
-      width: 100%;
-    `}
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+      `}
       ${media.lessThan('medium')`
-    height: 100%;
-    width: 100%;
-  `}
+        height: 100%;
+        width: 100%;
+      `}
     `;
     return (
       <BackgroundImg>

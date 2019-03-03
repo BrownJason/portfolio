@@ -13,12 +13,15 @@ class WorksComponent extends React.Component {
       padding-top: 3em;
       background-image: url(${this.props.img});
       background-size: cover;
+      background-repeat: repeat;
       ${media.lessThan('medium')`
-      flex-direction: column;
-      padding-top: 2em;
-      height: 100%;
-      width: 100%;
-    `}
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        background-size: cover;
+        background-repeat: repeat;
+      `}
     `;
 
     const Works = styled.div`
@@ -26,12 +29,18 @@ class WorksComponent extends React.Component {
       padding: 1em;
       padding-top: 4em;
       height: 80%;
+      ${media.between('medium', 'large')`
+        flex-direction: column;
+        margin: auto;
+        height: 80%;
+        width: 80%;
+      `}
       ${media.lessThan('medium')`
-      flex-direction: column;
-      padding-top: 4em;
-      height: 80%;
-      width: 80%;
-    `}
+        flex-direction: column;
+        margin: auto;
+        height: 80%;
+        width: 80%;
+      `}
     `;
     return (
       <Outer>
