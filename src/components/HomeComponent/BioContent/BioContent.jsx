@@ -36,7 +36,7 @@ class BioContent extends React.Component {
         flex-direction: column;
         justify-content: center;
         margin: auto;
-        margin-top: 175px;
+        margin-top: 225px;
         width: 100%;
       `}
     `;
