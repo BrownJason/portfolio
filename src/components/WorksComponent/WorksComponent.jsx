@@ -14,6 +14,12 @@ class WorksComponent extends React.Component {
       background-image: url(${this.props.img});
       background-size: cover;
       background-repeat: repeat;
+      transition: background-image 0.2s ease-in-out;
+      ${media.between('medium', 'large')`
+        height: 100%;
+        margin: auto;
+        width: 100%;
+      `}
       ${media.lessThan('medium')`
         flex-direction: column;
         height: 100%;
@@ -28,7 +34,7 @@ class WorksComponent extends React.Component {
       display: flex;
       padding: 1em;
       padding-top: 4em;
-      height: 80%;
+      height: 100%;
       ${media.between('medium', 'large')`
         flex-direction: column;
         margin: auto;

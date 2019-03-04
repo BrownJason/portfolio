@@ -13,6 +13,7 @@ const rotate = keyframes`
 class BioContent extends React.Component {
   render () {
     const Background = styled.div`
+      width: 100%;
       margin: auto;
     `;
 
@@ -23,14 +24,14 @@ class BioContent extends React.Component {
       margin-right: 40px;
       display: flex;
       justify-content: space-between;
-        ${media.between('medium', 'large')`
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: auto;
-      margin-top: 25px;
-      width: 100%;
-    `}
+      ${media.between('medium', 'large')`
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-top: 25px;
+        width: 100%;
+      `}
       ${media.lessThan('medium')`
         display: flex;
         flex-direction: column;
@@ -45,6 +46,7 @@ class BioContent extends React.Component {
       ${media.lessThan('medium')`
         justify-content: center;
         flex-direction: column;
+        margin: auto;
         margin-top: 25px;
         margin-bottom: 25px;
         width: 100%;
@@ -73,27 +75,23 @@ class BioContent extends React.Component {
 
     const Header = styled.h2`
       display: flex;
-      text-shadow: 5px 0 5px black;
+      text-shadow: 10px 0 10px black;
       font-size: 85px;
       display: flex;
       justify-content: center;
+      text-align: center;
       color: white;
       &:hover {
         animation: ${rotate} infinite 1s linear;
       }
       ${media.between('medium', 'large')`
         flex-direction: column;
-        font-size: 85px;
-        text-align: center;
-        text-shadow: 5px 0 5px  black;
         height: 100%;
         width: 100%;
       `}
       ${media.lessThan('medium')`
         display: flex;
         flex-direction: column;
-        text-align: center;
-        text-shadow: 5px 0 5px  black;
         font-size: 55px;
         height: 100%;
         width: 100%;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 class NavComponent extends Component {
   render () {
@@ -11,8 +10,14 @@ class NavComponent extends Component {
       text-decoration: none;
       list-style: none;
       color: black;
-      display: inline-flex;
+      justify-content: flex-start;
       margin-top: 10px;
+      text-decoration: none !important;
+      list-style: none !important;
+      display: inline-flex;
+      &:hover {
+        color: blue;
+      }
     `;
 
     const Outer = styled.div`
@@ -27,13 +32,12 @@ class NavComponent extends Component {
 
     const NavBar = styled.nav`
       height: 50px;
-      display: flex;
-      justify-content: flex-start;
       margin: auto;
       border-bottom: 5px solid black;
       text-decoration: none !important;
       list-style: none !important;
     `;
+
     return (
       <Outer>
         <NavBar>
