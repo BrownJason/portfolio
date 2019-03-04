@@ -17,6 +17,7 @@ class StoryComponent extends Component {
       ${media.between('medium', 'large')`
         display: flex;
         flex-direction: column;
+        padding: 1em;
         margin: auto;
         height: 100%;
         width: 100%;
@@ -24,6 +25,8 @@ class StoryComponent extends Component {
       `}
       ${media.lessThan('medium')`
         margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
         height: 100%;
         width: 100%;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
@@ -42,12 +45,14 @@ class StoryComponent extends Component {
         display: flex;
         flex-direction: column;
         background-size: cover;
+        padding: 5em;
         height: 100vh;
         width: 100%;
       `}
       ${media.lessThan('medium')`
         height: 100%;
         width: 100%;
+        padding: 3em;
       `}
     `;
     return (

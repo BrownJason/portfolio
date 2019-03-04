@@ -30,7 +30,7 @@ const List = styled.div`
   padding-bottom: 5px;
   text-decoration: none !important;
   list-style: none !important;
-  maring-left: 100px;
+  margin: auto;
   text-align: left;
   ${media.lessThan('medium')`
     font-size: 14pt;
@@ -45,7 +45,7 @@ const Right = styled.div`
   font-size: 28pt;
   padding-bottom: 5px;
   float: right;
-  margin-right: -55px;
+  margin: auto;
   text-decoration: none !important;
   list-style: none !important;
   text-align: right;
@@ -63,6 +63,13 @@ const UL = styled.ul`
 
 const Links = styled.a`
   color: white;
+  text-decoration: none !important;
+  list-style: none !important;
+  text-shadow: 10px 0 10px  black;
+  &:hover {
+    color: white;
+    background-color: black;
+  }
 `;
 
 class InterestList extends React.Component {

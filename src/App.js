@@ -27,7 +27,7 @@ import background from './images/background.jpg';
 import pathOfExile from './images/pathOfExile.jpg';
 
 class App extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       questions: [
@@ -49,11 +49,11 @@ class App extends React.Component {
     this.changeBackground = this.changeBackground.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.timeout = setTimeout(this.changeBackground, this.state.length * 2000);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     if (this.timeout) clearTimeout(this.timeout);
   }
 
@@ -64,7 +64,7 @@ class App extends React.Component {
 
         return { backgroundIndex: nextBackgroundIndex };
       },
-      function( ) {
+      function () {
         this.timeout = setTimeout(
           this.changeBackground,
           this.state.length * 2000

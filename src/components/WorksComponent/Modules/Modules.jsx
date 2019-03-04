@@ -9,14 +9,26 @@ class Modules extends React.Component {
       background: white;
       border-radius: 15px;
       padding: 10px;
-      margin-left: 25px;
       text-decoration: none;
       justify-content: center;
       width: 32em;
+      margin: auto;
+      margin-left: 25px;
+      margin-top: 0;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+      ${media.between('medium', 'large')`
+        height: 100%;
+        padding: 10px;
+        margin: auto;
+        margin-bottom: 50px;
+        text-decoration: none;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+      `}
       ${media.lessThan('medium')`
         height: 100%;
         padding: 10px;
+        margin: auto;
         margin-bottom: 50px;
         text-decoration: none;
         width: 100%;
@@ -35,6 +47,10 @@ class Modules extends React.Component {
     const Paragraph = styled.p`
       color: black;
       text-decoration: none;
+      ${media.lessThan('medium')`
+        width: 100%;
+        font-size: ;
+      `}
     `;
 
     const Image = styled.img`
