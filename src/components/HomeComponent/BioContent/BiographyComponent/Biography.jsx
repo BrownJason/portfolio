@@ -26,7 +26,7 @@ class Biography extends React.Component {
       ${media.between('medium', 'large')`
         padding: 2em;
         margin: auto;
-        margin-top: 150px;
+        margin-top: 50px;
         margin-bottom: 75px;
         height: 100%;
         width: 100%;

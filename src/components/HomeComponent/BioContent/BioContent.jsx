@@ -16,15 +16,16 @@ class BioContent extends React.Component {
     `;
 
     const Outer = styled.div`
-      margin: auto;
-      margin-top: 150px;
+      margin-top: 50px;
+      margin-left: 40px;
+      margin-right: 40px;
       display: flex;
       justify-content: space-between;
       ${media.between('medium', 'large')`
         flex-direction: column;
         justify-content: center;
         margin: auto;
-        margin-top: 150px;
+        margin-top: 25px;
         height: 80vh;
         width: 100%;
       `}
@@ -33,7 +34,7 @@ class BioContent extends React.Component {
         flex-direction: column;
         justify-content: center;
         margin: auto;
-        margin-top: 150px;
+        margin-top: 225px;
         height: 80vh;
         width: 100%;
       `}
@@ -41,17 +42,22 @@ class BioContent extends React.Component {
 
     const OuterDiv = styled.div`
       ${media.between('medium', 'large')`
+        display: flex;
         flex-direction: column;
-        margin-bottom: 175px;
+        justify-content: center;
+        margin: auto;
+        margin-top: 25px;
         width: 100%;
-        height: 20%;
+        height: 80vh;
       `}
       ${media.lessThan('medium')`
+        justify-content: center;
         flex-direction: column;
         margin: auto;
-        margin-bottom: 100px;
+        margin-top: 25px;
+        margin-bottom: 25px;
         width: 100%;
-        height: 50%;
+        height: 65%;
       `}
     `;
 
@@ -104,12 +110,14 @@ class BioContent extends React.Component {
           <Header>Jason Brown</Header>
         </AboutMe>
         <Outer>
+<<<<<<< HEAD
+=======
+          <InterestList />
+>>>>>>> parent of 35aad24... Home Fix
           <OuterDiv>
             <HeadShot />
           </OuterDiv>
-          <div>
-            <Biography />
-          </div>
+          <Biography />
         </Outer>
       </Background>
     );
