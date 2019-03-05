@@ -12,47 +12,53 @@ class HeadShot extends React.Component {
       width: 400px;
       margin: auto;
       background: white;
-      padding: 20px;
+      padding: 10px;
       height: 400px;
       display: flex;
-      display: inline-flex;
-      float: right;
       flex-direction: column;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6),
         0 6px 20px 0 rgba(0, 0, 0, 0.6);
-      border-radius: 10px; 
-      background-image: url(${headshot});
-      background-repeat: no-repeat;
-      background-size: cover;
-      border: 10px solid white;
+      border-radius: 10px;
       ${media.between('medium', 'large')`
-        height: 100%;
-        width: 100%;
+        height: 50vh;
+        width: 50vw;
       `}
       ${media.lessThan('medium')`
         height: 100%;
         width: 100%;
       `}
+    `;
+
+    const ResumeOuter = styled.div`
+      display: flex;
+      background: white;
+      height: 100%;
+      width: 100%;
+      background-image: url(${headshot});
+      background-repeat: no-repeat;
+      background-size: cover;
+      paddingt-bottom: -20px;
+      margin: auto;
+      margin-bottom: -25px;
     `;
 
     const Headshot = styled.div`
       width: 100%;
-      float: right;
+      height: 400px;
       ${media.between('medium', 'large')`
-        height: 100%;
-        width: 100%;
-      `} 
+        height: 50vh;
+        width: 50vw;
+      `}
       ${media.lessThan('medium')`
         height: 100%;
         width: 100%;
       `}
-
     `;
 
     const Resume = styled.a`
       padding-top: 10px;
-      padding-bottom: -10px;
-      margin: 0;
+      margin-top: 25px;
+      color: black;
       text-align: center;
       text-decoration: none;
       link-style: none;
@@ -60,9 +66,10 @@ class HeadShot extends React.Component {
     `;
     return (
       <Outer>
-        <Resume href={resume}>
+        <ResumeOuter>
           <Headshot />
-        </Resume>
+        </ResumeOuter>
+        <Resume href={resume} alt="">Resume</Resume>
       </Outer>
     );
   }

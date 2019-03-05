@@ -3,35 +3,30 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 const LinkedList = styled.div`
-  margin-top: 50px;
-  width: 500px;
+  width: 40em;
+  display: flex;
   flex-direction: column;
   ${media.between('medium', 'large')`
-    flex-direction: column;
-    margin-top: 125px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 20px;
-    height: 100%;
     width: 100%;
   `}
   ${media.lessThan('medium')`
-  flex-direction: column;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    height: 100%;
     width: 100%;
   `}
 `;
 
 const List = styled.div`
+  display: flex;
   font-size: 28pt;
   padding-bottom: 5px;
   text-decoration: none !important;
   list-style: none !important;
   margin: auto;
-  text-align: left;
+  text-align: left; 
+  ${media.between('medium', 'large')`
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  `}
   ${media.lessThan('medium')`
     font-size: 14pt;
     maring-left: 100px;
