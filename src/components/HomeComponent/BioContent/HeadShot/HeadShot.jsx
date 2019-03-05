@@ -10,7 +10,7 @@ class HeadShot extends React.Component {
   render () {
     const Outer = styled.div`
       width: 400px;
-      margin: 10px 0 0 0;
+      margin: auto;
       background: white;
       padding: 20px;
       height: 400px;
@@ -20,22 +20,33 @@ class HeadShot extends React.Component {
       flex-direction: column;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6),
         0 6px 20px 0 rgba(0, 0, 0, 0.6);
-      border-radius: 10px;
+      border-radius: 10px; 
+      background-image: url(${headshot});
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 10px solid white;
+      ${media.between('medium', 'large')`
+        height: 100%;
+        width: 100%;
+      `}
       ${media.lessThan('medium')`
         height: 100%;
         width: 100%;
       `}
     `;
 
-    const Headshot = styled.img`
-      background-image: url(${headshot});
-      background-repeat: no-repeat;
-      background-size: cover;
+    const Headshot = styled.div`
       width: 100%;
-      height: 100%;
-      display: block;
-      display: inline-block;
       float: right;
+      ${media.between('medium', 'large')`
+        height: 100%;
+        width: 100%;
+      `} 
+      ${media.lessThan('medium')`
+        height: 100%;
+        width: 100%;
+      `}
+
     `;
 
     const Resume = styled.a`
@@ -49,8 +60,9 @@ class HeadShot extends React.Component {
     `;
     return (
       <Outer>
-        <Headshot />
-        <Resume href={resume}>- Link to Resume -</Resume>
+        <Resume href={resume}>
+          <Headshot />
+        </Resume>
       </Outer>
     );
   }
