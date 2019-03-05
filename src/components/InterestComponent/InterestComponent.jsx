@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 import ReactPlayer from 'react-player';
-import vid from '../../someVideo.mp4';
+import vid from '../../BOPs.mp4';
 
 class InterestComponent extends Component {
   render () {
