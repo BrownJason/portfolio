@@ -111,6 +111,10 @@ class BioContent extends React.Component {
         </AboutMe>
         <Outer>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          <InterestList />
+>>>>>>> parent of 35aad24... Home Fix
 =======
           <InterestList />
 >>>>>>> parent of 35aad24... Home Fix
