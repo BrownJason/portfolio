@@ -3,6 +3,7 @@ import HeadShot from './HeadShot/HeadShot';
 import Biography from './BiographyComponent/Biography';
 import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
+import InterestList from './InterestList/InterestList';
 
 const rotate = keyframes`
   from { transform: rotateX(0deg); }
@@ -110,14 +111,7 @@ class BioContent extends React.Component {
           <Header>Jason Brown</Header>
         </AboutMe>
         <Outer>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           <InterestList />
->>>>>>> parent of 35aad24... Home Fix
-=======
-          <InterestList />
->>>>>>> parent of 35aad24... Home Fix
           <OuterDiv>
             <HeadShot />
           </OuterDiv>
