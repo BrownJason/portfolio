@@ -1,62 +1,71 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import CheeseburgerMenu from 'cheeseburger-menu';
+import HamburgerMenu from 'react-hamburger-menu';
+import MenuContent from './MenuContent';
 import styled from 'styled-components';
+import icon from '../../icon.ico';
 
-class NavComponent extends Component {
+class NavbarPage extends React.Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      menuOpen: false
+    };
+  }
+
+  openMenu () {
+    this.setState({ menuOpen: true });
+  }
+
+  closeMenu () {
+    this.setState({ menuOpen: false });
+  }
+
   render () {
-    const Link = styled(NavLink)`
-      font-size: 14pt;
-      padding-left: 10px;
-      text-decoration: none;
-      list-style: none;
-      color: black;
-      justify-content: flex-start;
-      margin-top: 10px;
-      text-decoration: none !important;
-      list-style: none !important;
-      display: inline-flex;
-      &:hover {
-        color: blue;
-      }
-    `;
-
     const Outer = styled.div`
-      backface-visibility: hidden;
-      background: white;
+      height: 27px;
+      width: 100%;
       position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1000;
+      z-index: 1002;
+      background: black;
+      display: flex;
     `;
 
-    const NavBar = styled.nav`
-      height: 50px;
-      margin: auto;
-      border-bottom: 5px solid black;
-      text-decoration: none !important;
-      list-style: none !important;
+    const Para = styled.div`
+      color: white;
+      text-align: center;
+      width: 100%;
+      justifty-content: flex-end;
+    `;
+
+    const Icon = styled.img`
+      height: 25px;
     `;
 
     return (
       <Outer>
-        <NavBar>
-          <Link exact to={'/'} activeStyle={{ color: 'blue' }}>
-            <i className="fa fa-home">&nbsp;&nbsp;Home</i>
-          </Link>
-          <Link exact to={'/Story'} activeStyle={{ color: 'blue' }}>
-            <i className="fa fa-book">&nbsp;&nbsp;Story</i>
-          </Link>
-          <Link exact to={'/Works'} activeStyle={{ color: 'blue' }}>
-            <i className="fa fa-archive">&nbsp;&nbsp;Works</i>
-          </Link>
-          <Link exact to={'/Interests'} activeStyle={{ color: 'blue' }}>
-            <i className="fa fa-gamepad">&nbsp;&nbsp;Interests</i>
-          </Link>
-        </NavBar>
+        <CheeseburgerMenu
+          isOpen={this.state.menuOpen}
+          closeCallback={this.closeMenu.bind(this)}
+        >
+          <MenuContent closeCallback={this.closeMenu.bind(this)} />
+        </CheeseburgerMenu>
+        <HamburgerMenu
+          isOpen={this.state.menuOpen}
+          menuClicked={this.openMenu.bind(this)}
+          width={32}
+          height={24}
+          strokeWidth={3}
+          rotate={0}
+          color='white'
+          borderRadius={0}
+          animationDuration={0.5}
+        />
+        <Para><a href="https://reactjs.org/docs/hello-world.html"><Icon src={icon} alt="" /></a></Para>
       </Outer>
     );
   }
 }
 
-export default NavComponent;
+export default NavbarPage;

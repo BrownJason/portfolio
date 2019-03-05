@@ -14,22 +14,20 @@ class BioContent extends React.Component {
   render () {
     const Background = styled.div`
       width: 100%;
-      margin: auto;
     `;
 
     const Outer = styled.div`
-      height: 80vh;
       margin-top: 50px;
       margin-left: 40px;
       margin-right: 40px;
       display: flex;
       justify-content: space-between;
       ${media.between('medium', 'large')`
-        display: flex;
         flex-direction: column;
         justify-content: center;
         margin: auto;
         margin-top: 25px;
+        height: 80vh;
         width: 100%;
       `}
       ${media.lessThan('medium')`
@@ -38,11 +36,21 @@ class BioContent extends React.Component {
         justify-content: center;
         margin: auto;
         margin-top: 225px;
+        height: 80vh;
         width: 100%;
       `}
     `;
 
     const OuterDiv = styled.div`
+      ${media.between('medium', 'large')`
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-top: 25px;
+        width: 100%;
+        height: 80vh;
+      `}
       ${media.lessThan('medium')`
         justify-content: center;
         flex-direction: column;

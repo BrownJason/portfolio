@@ -8,6 +8,9 @@ class Biography extends React.Component {
   render () {
     const Paragraph = styled.p`
       width: 100%;
+      ${media.lessThan('medium')`
+        text-align: justify;
+      `}
     `;
 
     const BioRight = styled.div`
@@ -20,6 +23,14 @@ class Biography extends React.Component {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6),
         0 6px 20px 0 rgba(0, 0, 0, 0.6);
       border-radius: 10px;
+      ${media.between('medium', 'large')`
+        padding: 2em;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 75px;
+        height: 100%;
+        width: 100%;
+      `}
       ${media.lessThan('medium')`
         flex-direction: column;
         background: rgba(255,255,255,0.9);

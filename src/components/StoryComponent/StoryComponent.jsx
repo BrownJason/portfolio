@@ -13,12 +13,15 @@ class StoryComponent extends Component {
       border-radius: 15px;
       width: 100%;
       margin: auto;
+      margin-bottom: 70px;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       ${media.between('medium', 'large')`
         display: flex;
         flex-direction: column;
         padding: 1em;
         margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
         height: 100%;
         width: 100%;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
@@ -43,10 +46,8 @@ class StoryComponent extends Component {
       animation: ease-in infinite linear;
       ${media.between('medium', 'large')`
         display: flex;
-        flex-direction: column;
-        background-size: cover;
         padding: 5em;
-        height: 100vh;
+        height: 100%;
         width: 100%;
       `}
       ${media.lessThan('medium')`
