@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import InterestList from './InterestList/InterestList';
 import HeadShot from './HeadShot/HeadShot';
 import Biography from './BiographyComponent/Biography';
 import styled, { keyframes } from 'styled-components';
@@ -105,9 +104,6 @@ class BioContent extends React.Component {
           <Header>Jason Brown</Header>
         </AboutMe>
         <Outer>
-          <div>
-            <InterestList />
-          </div>
           <OuterDiv>
             <HeadShot />
           </OuterDiv>

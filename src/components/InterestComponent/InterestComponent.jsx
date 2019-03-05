@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 import ReactPlayer from 'react-player';
+import InterestList from './InterestList/InterestList';
 
 class InterestComponent extends Component {
   render () {
@@ -41,7 +42,11 @@ class InterestComponent extends Component {
     //   `}
     // `;
     return (
-      <Container />
+      <Container>
+        <div>
+          <InterestList />
+        </div>
+      </Container>
     );
   }
 }
