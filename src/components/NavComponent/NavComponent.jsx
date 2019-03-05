@@ -24,7 +24,7 @@ class NavbarPage extends React.Component {
 
   render () {
     const Outer = styled.div`
-      height: 27px;
+      height: 44px;
       width: 100%;
       position: fixed;
       z-index: 1002;
@@ -40,7 +40,14 @@ class NavbarPage extends React.Component {
     `;
 
     const Icon = styled.img`
-      height: 25px;
+      margin-top: 7px;
+      height: 30px;
+    `;
+
+    const Spacer = styled.div`
+      width: 15px;
+      margin-top: 10px;
+      margin-left: 10px;
     `;
 
     return (
@@ -51,17 +58,19 @@ class NavbarPage extends React.Component {
         >
           <MenuContent closeCallback={this.closeMenu.bind(this)} />
         </CheeseburgerMenu>
-        <HamburgerMenu
-          isOpen={this.state.menuOpen}
-          menuClicked={this.openMenu.bind(this)}
-          width={32}
-          height={24}
-          strokeWidth={3}
-          rotate={0}
-          color='white'
-          borderRadius={0}
-          animationDuration={0.5}
-        />
+        <Spacer>
+          <HamburgerMenu
+            isOpen={this.state.menuOpen}
+            menuClicked={this.openMenu.bind(this)}
+            width={32}
+            height={24}
+            strokeWidth={3}
+            rotate={0}
+            color='white'
+            borderRadius={0}
+            animationDuration={0.5}
+          /> 
+        </Spacer>
         <Para><a href="https://reactjs.org/docs/hello-world.html"><Icon src={icon} alt="" /></a></Para>
       </Outer>
     );
