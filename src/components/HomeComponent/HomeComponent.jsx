@@ -34,8 +34,6 @@ class HomeComponent extends Component {
         height: 100%;
         width: 100%;
         margin: auto;
-        background-size: cover;
-        background-repeat: repeat;
       `}
     `;
 

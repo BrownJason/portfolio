@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HomeComponent from './components/HomeComponent/HomeComponent';
 import NavComponent from './components/NavComponent/NavComponent';
 import WorksComponent from './components/WorksComponent/WorksComponent';
-import InterestComponent from './components/InterestComponent/InterestComponent';
+import ContactComponent from './components/ContactComponent/ContactComponent';
 import StoryComponent from './components/StoryComponent/StoryComponent';
 import { Route } from 'react-router-dom';
 import FooterComponent from './components/FooterComponent/FooterComponent';
@@ -102,7 +102,7 @@ class App extends React.Component {
           <Route
             exact
             path={'/Interests'}
-            render={() => <InterestComponent />}
+            render={() => <ContactComponent background={this.imgs[this.state.backgroundIndex]} />}
           />
         </div>
         <FooterComponent />
