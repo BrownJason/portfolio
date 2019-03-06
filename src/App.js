@@ -22,6 +22,10 @@ import modules4 from './WorksText/modules4.json';
 
 import pathOfExile from './images/pathOfExile.jpg';
 
+import detroit from './images/detroit.jpg';
+import detroit2 from './images/detroit2.jpg';
+import background from './images/background.jpg';
+
 class App extends React.Component {
   constructor (props) {
     super(props);
@@ -36,12 +40,39 @@ class App extends React.Component {
         questions7
       ],
       modules: [modules1, modules2, modules3, modules4],
-      pOE: pathOfExile
+      pOE: pathOfExile,
+      backgroundIndex: 1,
+      length: 3
     };
+    this.imgs = [detroit, detroit2, background];
+    this.changeBackground = this.changeBackground.bind(this);
+  }
+
+  componentDidMount () {
+    this.timeout = setTimeout(this.changeBackground, this.state.length * 2000);
+  }
+
+  componentWillUnmount () {
+    if (this.timeout) clearTimeout(this.timeout);
+  }
+
+  changeBackground () {
+    this.setState(
+      function ({ backgroundIndex }) {
+        const nextBackgroundIndex = ++backgroundIndex % this.imgs.length;
+
+        return { backgroundIndex: nextBackgroundIndex };
+      },
+      function () {
+        this.timeout = setTimeout(
+          this.changeBackground,
+          this.state.length * 2000
+        );
+      }
+    );
   }
 
   render () {
-    const image = this.state.pOE;
     return (
       <div className="App" id="home">
         <NavComponent />
@@ -50,13 +81,13 @@ class App extends React.Component {
             exact
             path={'/'}
             render={() => (
-              <HomeComponent />
+              <HomeComponent background={this.imgs[this.state.backgroundIndex]} />
             )}
           />
           <Route
             exact
             path={'/Story'}
-            render={() => <StoryComponent questions={this.state.questions} />}
+            render={() => <StoryComponent questions={this.state.questions} background={this.imgs[this.state.backgroundIndex]} />}
           />
           <Route
             exact
@@ -64,6 +95,7 @@ class App extends React.Component {
             render={() => (
               <WorksComponent
                 modules={this.state.modules}
+                background={this.imgs[this.state.backgroundIndex]}
               />
             )}
           />

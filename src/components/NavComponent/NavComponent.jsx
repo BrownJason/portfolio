@@ -24,12 +24,12 @@ class NavbarPage extends React.Component {
 
   render () {
     const Outer = styled.div`
+      display: inline-flex;
       height: 44px;
       width: 100%;
       position: fixed;
       z-index: 1002;
       background: black;
-      display: flex;
     `;
 
     const Para = styled.div`
@@ -69,7 +69,7 @@ class NavbarPage extends React.Component {
             color='white'
             borderRadius={0}
             animationDuration={0.5}
-          /> 
+          />
         </Spacer>
         <Para><a href="https://reactjs.org/docs/hello-world.html"><Icon src={icon} alt="" /></a></Para>
       </Outer>

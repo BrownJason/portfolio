@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-import pdf from '../../../../documents/bio.docx';
+import pdf from '../../../documents/bio.docx';
 
 class Biography extends React.Component {
   render () {
