@@ -40,10 +40,12 @@ class ContactComponent extends Component {
       ${media.between('medium', 'large')`
         flex-direction: column;
         width: 100%;
+        margin: auto;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
         width: 100%;
+        margin: auto;
       `}
     `;
 
@@ -80,6 +82,7 @@ class ContactComponent extends Component {
         flex-direction: column;
         width: 100%;
         height: 100%;
+        margin: auto;
         padding-left: 5px;
       `}
       ${media.lessThan('medium')`
@@ -115,6 +118,7 @@ class ContactComponent extends Component {
         flex-direction: column;
         width: 100%;
         height: 100%;
+        margin-top: -15px;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
