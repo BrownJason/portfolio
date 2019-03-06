@@ -88,7 +88,7 @@ class ContactComponent extends Component {
 
     const Header1 = styled.h3`
       text-style: italic;
-      margin-left: 50px;
+      margin-left: 30px;
       display: flex;
       ${media.between('medium', 'large')`
         flex-direction: column;
@@ -156,7 +156,7 @@ class ContactComponent extends Component {
     `;
 
     const InterestContactList = styled.li`
-      width: 75%;
+      width: 80%;
       margin: auto;
       text-decoration: none !important;
       list-style: none !important;
@@ -166,7 +166,7 @@ class ContactComponent extends Component {
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
-        margin-top: -15px;
+        width: 60%;
       `}
     `;
 
