@@ -58,11 +58,13 @@ class ContactComponent extends Component {
         flex-direction: column;
         margin: auto;
         width: 100%;
+        height: 100%;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
         margin: auto;
         width: 100%;
+        height: 100%;
       `}
     `;
 
@@ -77,11 +79,13 @@ class ContactComponent extends Component {
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: 100%;
         padding-left: 5px;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
         width: 100%;
+        height: 100%;
         padding-left: 5px;
       `}
     `;
@@ -90,12 +94,13 @@ class ContactComponent extends Component {
       text-style: italic;
       margin-left: 30px;
       display: flex;
+      flex-direction: column;
       ${media.between('medium', 'large')`
-        flex-direction: column;
         width: 100%;
+        height: 100%;
       `}
       ${media.lessThan('medium')`
-        flex-direction: column;
+        height: 100%;
         width: 100%;
       `}
     `;
@@ -109,10 +114,13 @@ class ContactComponent extends Component {
       ${media.between('medium', 'large')`
         flex-direction: column;
         width: 100%;
+        height: 100%;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
         width: 100%;
+        height: 100%;
+        margin-top: -15px;
       `}
     `;
 
@@ -129,29 +137,12 @@ class ContactComponent extends Component {
       ${media.between('medium', 'large')`
         flex-direction: column;
         width: 100%;
+        height: 100%;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
         width: 100%;
-      `}
-    `;
-
-    const Interest = styled.div`
-      display: flex;
-      flex-direction: column;
-      background: lightgrey;
-      border-radius: 15px;
-      width: 100%;
-      margin: auto;
-      margin-top: 25px;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
-      ${media.between('medium', 'large')`
-        flex-direction: column;
-        width: 100%;
-      `}
-      ${media.lessThan('medium')`
-        flex-direction: column;
-        width: 100%;
+        height: 100%;
       `}
     `;
 
@@ -189,7 +180,7 @@ class ContactComponent extends Component {
             </Header1>
           </List>
         </Contact>
-        <Interest>
+        <Contact>
           <List>
             <Header2>Interests</Header2>
             <Header1>
@@ -199,7 +190,7 @@ class ContactComponent extends Component {
               </InterestContactList>
             </Header1>
           </List>
-        </Interest>
+        </Contact>
       </Outer>
     );
   }
