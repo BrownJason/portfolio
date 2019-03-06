@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import styled, { keyframes } from 'styled-components';
-import media from 'styled-media-query';
-import ReactPlayer from 'react-player';
+import styled from 'styled-components';
 
 class InterestComponent extends Component {
   render () {

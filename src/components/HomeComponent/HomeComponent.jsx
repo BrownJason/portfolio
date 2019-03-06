@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import media from 'styled-media-query';
 
-import detroit from '../../images/detroit.jpg';
-import detroit2 from '../../images/detroit2.jpg';
-import background from '../../images/background.jpg';
-
 import HeadShot from './HeadShot/HeadShot';
 import Biography from './BiographyComponent/Biography';
 import styled, { keyframes } from 'styled-components';

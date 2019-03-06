@@ -68,7 +68,6 @@ const Links = styled.a`
   text-shadow: 10px 0 10px  black;
   &:hover {
     color: white;
-    background-color: black;
   }
 `;
 

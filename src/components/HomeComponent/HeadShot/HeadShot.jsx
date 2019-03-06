@@ -39,10 +39,16 @@ class HeadShot extends React.Component {
     `}
     `;
 
+    const Resume = styled.p`
+      text-align: center;
+      margin: auto;
+    `;
+
     const Link = styled.a`
       color: black;
       text-decoration: none;
-      &:hover {
+      &:hover ${Resume} {
+        display: none;
         text-decoration: none;
       }
     `;
@@ -56,6 +62,7 @@ class HeadShot extends React.Component {
       <Outer>
         <Link href={`${resume}`}>
           <Image src={`${headshot}`} alt="" />
+          <Resume>Click to Download Resume</Resume>
         </Link>
       </Outer>
     );
