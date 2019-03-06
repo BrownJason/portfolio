@@ -25,7 +25,8 @@ class ContactComponent extends Component {
         flex-direction: column;
         height: 100vh;
         width: 100%;
-        padding: 5em;
+        padding: 3em;
+        padding-top: 5em;
       `}
     `;
 
@@ -37,17 +38,12 @@ class ContactComponent extends Component {
       width: 100%;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       ${media.between('medium', 'large')`
-        display: flex;
         flex-direction: column;
-        padding: 1em;
         width: 100%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
-        padding: 3em;
         width: 100%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       `}
     `;
 
@@ -60,13 +56,13 @@ class ContactComponent extends Component {
       flex-direction: column;
       ${media.between('medium', 'large')`
         flex-direction: column;
+        margin: auto;
         width: 100%;
-        margin-left: 5px;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
+        margin: auto;
         width: 100%;
-        margin-left: 5px;
       `}
     `;
 
@@ -81,12 +77,12 @@ class ContactComponent extends Component {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-left: 5px;
+        padding-left: 5px;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
         width: 100%;
-        margin-left: 5px;
+        padding-left: 5px;
       `}
     `;
 
@@ -97,66 +93,80 @@ class ContactComponent extends Component {
       ${media.between('medium', 'large')`
         flex-direction: column;
         width: 100%;
-        margin-left: 15px;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
         width: 100%;
-        margin-left: 15px;
       `}
     `;
 
     const Paragraph = styled.p`
-      margin: auto;
-      margin-left: 25px;
       font-size: 17px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      width: 100%;
+      text-align: right;
       ${media.between('medium', 'large')`
         flex-direction: column;
         width: 100%;
-        margin: auto;
-        margin-left: 25px;
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
         width: 100%;
-        margin: 0;
-        margin-left: 25px;
       `}
     `;
 
     const Link = styled.a`
       color: black;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
       text-decoration: none !important;
       list-style: none !important;
       &:hover {
         color: white;
       }
-    `;
-
-    const Interest = styled.div`
-      float: left;
-      background: lightgrey;
-      border-radius: 15px;
-      margin-top: 25px;
-      width: 100%;
-      flex-direction: column;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       ${media.between('medium', 'large')`
-        display: flex;
         flex-direction: column;
-        padding: 1em;
-        margin-top: 25px;
         width: 100%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
       `}
       ${media.lessThan('medium')`
         flex-direction: column;
-        padding: 3em;
         width: 100%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+      `}
+    `;
+
+    const Interest = styled.div`
+      display: flex;
+      flex-direction: column;
+      background: lightgrey;
+      border-radius: 15px;
+      width: 100%;
+      margin: auto;
+      margin-top: 25px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.6);
+      ${media.between('medium', 'large')`
+        flex-direction: column;
+        width: 100%;
+      `}
+      ${media.lessThan('medium')`
+        flex-direction: column;
+        width: 100%;
+      `}
+    `;
+
+    const InterestContactList = styled.li`
+      width: 75%;
+      margin: auto;
+      text-decoration: none !important;
+      list-style: none !important;
+      flex-direction: column;
+      ${media.between('medium', 'large')`
+        flex-direction: column;
+      `}
+      ${media.lessThan('medium')`
+        flex-direction: column;
+        margin-top: -15px;
       `}
     `;
 
@@ -167,11 +177,15 @@ class ContactComponent extends Component {
             <Header2>Contact Information</Header2>
             <Header1>
               LinkedIn:
-              <Paragraph><Link href='https://www.linkedin.com/in/jason-brown-7117a646/'>Jason Brown</Link></Paragraph>
+              <InterestContactList>
+                <Paragraph><Link href='https://www.linkedin.com/in/jason-brown-7117a646/'>Jason Brown</Link></Paragraph>
+              </InterestContactList>
             </Header1>
             <Header1>
               Gmail:
-              <Paragraph><Link href='mailto:me@jbjbro6@gmail.com'>jbjbro6@gmail.com</Link></Paragraph>
+              <InterestContactList>
+                <Paragraph><Link href='mailto:me@jbjbro6@gmail.com'>jbjbro6@gmail.com</Link></Paragraph>
+              </InterestContactList>
             </Header1>
           </List>
         </Contact>
@@ -180,11 +194,9 @@ class ContactComponent extends Component {
             <Header2>Interests</Header2>
             <Header1>
               Gaming:
-              <List>
-                <Paragraph>- Steam</Paragraph>
-                <Paragraph>- PS4</Paragraph>
-                <Paragraph>- Nintendo Switch</Paragraph>
-              </List>
+              <InterestContactList>
+                <Paragraph><Link href='https://steamcommunity.com/profiles/76561198112819248/'>Steam</Link></Paragraph>
+              </InterestContactList>
             </Header1>
           </List>
         </Interest>
